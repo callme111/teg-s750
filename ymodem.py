@@ -15,7 +15,7 @@ YMODEM_READY = "## Ready for binary (ymodem) download to 0x82000000 at 115200 bp
 ESC = bytes(chr(27), "ascii")
 LOADY = "loady 0x82000000\n".encode("ascii")
 BOOTM = "bootm 0x82000000\n".encode("ascii")
-
+RTK_NETWORK_ON = "rtk network on\n".encode("ascii")
 
 def read_all(ser):
     to_read = ser.in_waiting
@@ -59,9 +59,10 @@ class MyModem:
             modem.send(file)
 
 
-def transfer_and_run(port, baudrate, filename):
+def transfer_and_run(port, baudrate, filename, should_rtk_network_on):
 
     transferred = False
+    did_rtk_network_on = False
     
     with serial.Serial(port, baudrate=baudrate) as ser:
 
@@ -83,7 +84,10 @@ def transfer_and_run(port, baudrate, filename):
             
             elif line.startswith(PROMPT):
                 line = ""
-                if not transferred:
+                if should_rtk_network_on and not did_rtk_network_on:
+                    did_rtk_network_on = True
+                    write_response(ser, RTK_NETWORK_ON)
+                elif not transferred:
                     write_response(ser, LOADY)
                 else:
                     write_response(ser, BOOTM)
@@ -99,8 +103,12 @@ def transfer_and_run(port, baudrate, filename):
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
-        print(f"Usage: {sys.argv[0]} port filename")
+        print(f'Usage: {sys.argv[0]} port filename ["no_net" to not send "rtk network on"]')
         sys.exit(1)
     
-    transfer_and_run(sys.argv[1], 115200, sys.argv[2])
+    should_rtk_network_on = True
+    if len(sys.argv) == 4 and sys.argv[3] == "no_net":
+        should_rtk_network_on = False
+
+    transfer_and_run(sys.argv[1], 115200, sys.argv[2], should_rtk_network_on)
 

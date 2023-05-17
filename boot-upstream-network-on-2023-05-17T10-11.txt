@@ -1,0 +1,414 @@
+RTL9300# # bootm 0x82000000
+## Booting kernel from Legacy Image at 82000000 ...
+   Image Name:   MIPS OpenWrt Linux-5.15.111
+   Created:      2023-05-16  14:33:20 UTC
+   Image Type:   MIPS Linux Kernel Image (gzip compressed)
+   Data Size:    6539104 Bytes = 6.2 MB
+   Load Address: 80100000
+   Entry Point:  80100000
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Linux version 5.15.111 (builder@buildhost) (mips-openwrt-linux-musl-gcc (OpenWrt GCC 12.3.0 r22899-466be0612a) 12.3.0, GNU ld (GNU Binutils) 2.40.0) #0 Tue May 16 14:33:20 2023
+[    0.000000] RTL838X model is 0
+[    0.000000] RTL839X model is 0
+[    0.000000] RTL93XX model is 93030001
+[    0.000000] SoC Type: RTL9303
+[    0.000000] printk: bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019555 (MIPS 34Kc)
+[    0.000000] MIPS: machine is Zyxel XGS1250-12 Switch
+[    0.000000] earlycon: ns16550a0 at MMIO 0x18002000 (options '115200n8')
+[    0.000000] printk: bootconsole [ns16550a0] enabled
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Using appended Device Tree.
+[    0.000000] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 32480
+[    0.000000] Kernel command line: earlycon
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes, linear)
+[    0.000000] Writing ErrCtl register=0000519e
+[    0.000000] Readback ErrCtl register=0000519e
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 111028K/131072K available (6155K kernel code, 617K rwdata, 1328K rodata, 10388K init, 219K bss, 20044K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS: 256
+[    0.000000] Failed to get CPU clock: -2
+[    0.000000] CPU frequency from device tree: 800MHz
+[    0.000000] clocksource: realtek_otto_timer: mask: 0xfffffff max_cycles: 0xfffffff, max_idle_ns: 38225208801 ns
+[    0.000001] sched_clock: 28 bits at 3125kHz, resolution 320ns, wraps every 42949672800ns
+[    0.008981] Calibrating delay loop... 531.66 BogoMIPS (lpj=2658304)
+[    0.065691] pid_max: default: 32768 minimum: 301
+[    0.071740] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.079763] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.095936] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.106722] futex hash table entries: 256 (order: -1, 3072 bytes, linear)
+[    0.114369] pinctrl core: initialized pinctrl subsystem
+[    0.121704] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.146654] clocksource: Switched to clocksource realtek_otto_timer
+[    0.155198] NET: Registered PF_INET protocol family
+[    0.160837] IP idents hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.169787] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 4096 bytes, linear)
+[    0.179003] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.187486] TCP established hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.195844] TCP bind hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.203568] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.210691] UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.217919] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.225973] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.307103] workingset: timestamp_bits=14 max_order=15 bucket_order=1
+[    0.320370] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.326822] jffs2: version 2.2 (NAND) (SUMMARY) (ZLIB) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.368324] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    0.388236] pinctrl-single 1b00cc00.pinmux: 32 pins, size 4
+[    0.395783] Serial: 8250/16550 driver, 16 ports, IRQ sharing enabled
+[    0.406127] printk: console [ttyS0] disabled
+[    0.410941] 18002000.uart: ttyS0 at MMIO 0x18002000 (irq = 30, base_baud = 10937500) is a 16550A
+[    0.420590] printk: console [ttyS0] enabled
+[    0.420590] printk: console [ttyS0] enabled
+[    0.429916] printk: bootconsole [early0] disabled
+[    0.429916] printk: bootconsole [early0] disabled
+[    0.440390] printk: bootconsole [ns16550a0] disabled
+[    0.440390] printk: bootconsole [ns16550a0] disabled
+[    0.572164] brd: module loaded
+[    0.581224] spi-nor spi0.0: mx25l12805d (16384 Kbytes)
+[    0.587075] 7 fixed-partitions partitions found on MTD device spi0.0
+[    0.594228] OF: Bad cell count for /soc/spi@1200/flash@0/partitions
+[    0.601313] OF: Bad cell count for /soc/spi@1200/flash@0/partitions
+[    0.608607] Creating 7 MTD partitions on "spi0.0":
+[    0.613952] 0x000000000000-0x0000000e0000 : "u-boot"
+[    0.622409] 0x0000000e0000-0x0000000f0000 : "u-boot-env"
+[    0.629594] 0x0000000f0000-0x000000100000 : "u-boot-env2"
+[    0.638817] 0x000000100000-0x000000200000 : "jffs"
+[    0.645475] 0x000000200000-0x000000300000 : "jffs2"
+[    0.653994] 0x000000300000-0x000000fe0000 : "firmware"
+[    0.677188] 0x000000fe0000-0x000001000000 : "log"
+[    0.692520] Probing RTL838X eth device pdev: 82097a00, dev: 82097a10
+[    0.719383] Found SoC ID: 9303: RTL9303, family 9300
+[    0.725003] Using MAC 000000e04c000000
+[    0.729266] set sds port 0 to 2
+[    0.732798] set sds port 24 to 6
+[    0.736380] set sds port 25 to 7
+[    0.740001] set sds port 26 to 8
+[    0.743587] set sds port 27 to 9
+[    0.747905] c45_mask: 000e0000
+[    0.751352] mdio_bus mdio-bus: MDIO device at address 0 is missing.
+[    0.758412] mdio_bus mdio-bus: MDIO device at address 1 is missing.
+[    0.765402] mdio_bus mdio-bus: MDIO device at address 2 is missing.
+[    0.772429] mdio_bus mdio-bus: MDIO device at address 3 is missing.
+[    0.779468] mdio_bus mdio-bus: MDIO device at address 4 is missing.
+[    0.786459] mdio_bus mdio-bus: MDIO device at address 5 is missing.
+[    0.793494] mdio_bus mdio-bus: MDIO device at address 6 is missing.
+[    0.800532] mdio_bus mdio-bus: MDIO device at address 7 is missing.
+[    0.813941] mdio_bus mdio-bus: MDIO device at address 24 is missing.
+[    0.827469] mdio_bus mdio-bus: MDIO device at address 25 is missing.
+[    0.840943] mdio_bus mdio-bus: MDIO device at address 26 is missing.
+[    0.909070] REALTEK RTL9300 SERDES mdio-bus:1b: Detected internal RTL9300 Serdes
+[    0.917371] rtl9300_configure_serdes: Port 27, SerDes is 9
+[    0.927489] rtl9300_configure_serdes CMU BAND is 16
+[    0.932906] rtl9300_sds_rst 31
+[    0.956288] rtl9300_configure_serdes PATCHING SerDes 9
+[    0.963057] rtl9300_phy_enable_10g_1g 1gbit phy: 00001140
+[    0.969086] rtl9300_phy_enable_10g_1g 1gbit phy enabled: 00001140
+[    0.976884] rtl9300_phy_enable_10g_1g 10gbit phy: 00002040
+[    0.982980] rtl9300_phy_enable_10g_1g 10gbit phy after: 00002040
+[    0.990673] rtl9300_phy_enable_10g_1g set medium: 00000000
+[    0.996794] rtl9300_phy_enable_10g_1g set medium after: 00000002
+[    1.023458] rtl9300_configure_serdes: Configuring RTL9300 SERDES 9, mode 1a
+[    1.033222] rtl9300_serdes_mac_link_config: registers before 00000000 00001403
+[    1.043272] rtl9300_serdes_mac_link_config: registers after 00000000 00001403
+[    1.071215] rtl9300_force_sds_mode: SDS: 9, mode 0
+[    1.076544] rtl9300_force_sds_mode --------------------- serdes 9 forcing to 1f ...
+[    1.088091] rtl9300_force_sds_mode: SDS: 9, mode 27
+[    1.093510] rtl9300_force_sds_mode --------------------- serdes 9 forcing to 1a ...
+[    5.814684] rtl9300_force_sds_mode --------------------- serdes 9 forced to 1a DONE
+[    5.823233] start_1.1.1 initial value for sds 9
+[    5.856273] end_1.1.1 --
+[    5.859110] start_1.1.2 Load DFE init. value
+[    5.864850] end_1.1.2
+[    5.867388] start_1.1.3 disable LEQ training,enable DFE clock
+[    5.879782] end_1.1.3 --
+[    5.882591] start_1.1.4 offset cali setting
+[    5.888267] end_1.1.4
+[    5.890788] start_1.1.5 LEQ and DFE setting
+[    5.902447] end_1.1.5
+[    5.911970] start_1.2.1 ForegroundOffsetCal_Manual
+[    5.919316] end_1.2.1
+[    5.927321] start_1.2.3 Foreground Calibration
+[    5.940776] rtl9300_do_rx_calibration_2_3: fgcal_gray: 20, fgcal_binary 20
+[    5.949443] rtl9300_do_rx_calibration_2_3: end_1.2.3
+[    5.954958] start_1.4.1
+[    6.176689] end_1.4.1
+[    6.179408] start_1.4.2
+[    6.187938] vth_set_bin = 4
+[    6.190652] vth_set_bin = 2
+[    6.194746] Vth Maunal = 1
+[    6.306729] Tap0 Sign : +
+[    6.309740] tap0_coef_bin = 20
+[    6.313642] tap0 manual = 1
+[    6.320045] end_1.4.2
+[    6.323143] start_1.5.2
+[    6.399593] end_1.5.2
+[    6.487429] i2c_dev: i2c /dev entries driver
+[    6.494856] rtl9300_i2c_probe probing I2C adapter
+[    6.500197] i2c-rtl9300 1b00036c.i2c-rtl9300: SCL speed 100000, mode is 0
+[    6.507790] rtl9300_i2c_probe scl_num 0
+[    6.512054] rtl9300_i2c_probe sda_num 1
+[    6.519647] NET: Registered PF_INET6 protocol family
+[    6.538694] Segment Routing with IPv6
+[    6.542908] In-situ OAM (IOAM) with IPv6
+[    6.547479] NET: Registered PF_PACKET protocol family
+[    6.553201] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    6.568037] 8021q: 802.1Q VLAN Support v1.8
+[    6.574141] sfp sfp-p12: Host maximum power 1.0W
+[    6.606740] REALTEK RTL9300 SERDES rtl838x slave mii-0:1b: Detected internal RTL9300 Serdes
+[    6.616050] REALTEK RTL9300 SERDES rtl838x slave mii-0:1b: No DT node.
+[    6.623345] REALTEK RTL9300 SERDES: probe of rtl838x slave mii-0:1b failed with error -22
+[    6.656419] REALTEK RTL9300 SERDES rtl838x slave mii-0:3f: Detected internal RTL9300 Serdes
+[    6.665802] REALTEK RTL9300 SERDES rtl838x slave mii-0:3f: No DT node.
+[    6.673112] REALTEK RTL9300 SERDES: probe of rtl838x slave mii-0:3f failed with error -22
+[    6.702547] rtl93xx_setup called
+[    6.706198] In rtl83xx_vlan_setup
+[    6.709950] In rtl930x_vlan_profile_setup
+[    6.714410] In rtl930x_vlan_profile_setup
+[    6.718896] UNKNOWN_MC_PMASK: 000000001fffffff
+[    6.723837] VLAN 0: L2 learn: 0; Unknown MC PMasks: L2 1fffffff, IPv4 1fffffff, IPv6: 1fffffff
+[    6.723851]   Routing enabled: IPv4 UC y, IPv6 UC y, IPv4 MC y, IPv6 MC y
+[    6.741009]   Bridge enabled: IPv4 MC n, IPv6 MC n,
+[    6.746429] VLAN profile 0: raw 00033000 00000000 1fffffff 1fffffff 1fffffff
+[    7.776664] rtl83xx_enable_phy_polling:          f0000ff
+[    7.782591] rtl930x_pie_init
+[    7.786001] rtl930x_led_init called
+[    7.790031] rtl930x_led_init bb00cc00: 01052659
+[    7.795069] rtl930x_led_init bb00cc04: aaab5555
+[    7.800128] rtl930x_led_init bb00cc08: 007fabab
+[    7.805162] rtl930x_led_init bb00cc0c: 00000000
+[    7.810215] rtl930x_led_init bb00cc10: 00000000
+[    7.815247] rtl930x_led_init bb00cc14: 0000ffff
+[    7.820301] rtl930x_led_init bb00cc18: 0a200a01
+[    7.825333] rtl930x_led_init bb00cc1c: 0a0b0a28
+[    7.830385] rtl930x_led_init bb00cc20: 0a820a0b
+[    7.835417] rtl930x_led_init bb00cc24: 0000ffff
+[    7.840471] rtl930x_led_init bb00cc28: 0a200b80
+[    7.845502] rtl930x_led_init bb00cc2c: 00000000
+[    7.850555] rtl930x_led_init bb00cc30: 00950000
+[    7.855586] rtl930x_led_init bb00cc34: 00000000
+[    7.860641] rtl930x_led_init bb00cc38: 00950000
+[    7.865672] rtl930x_led_init bb00cc3c: 0f0000ff
+[    7.870734] rtl930x_led_init bb00cc40: 0f0000ff
+[    7.875774] rtl930x_led_init bb00cc44: 0f0000ff
+[    7.880832] rtl930x_led_init bb00cc48: 00000000
+[    7.885868] rtl930x_led_init bb00cc4c: 00000000
+[    7.890921] rtl930x_led_init bb00cc50: 00000000
+[    7.895953] rtl930x_led_init bb00cc54: 00000000
+[    7.901006] rtl930x_led_init bb00cc58: 00000000
+[    7.906038] rtl930x_led_init bb00cc5c: 00000000
+[    7.911415] rtl83xx-switch switch@1b000000: configuring for fixed/internal link mode
+[    7.920112] rtl93xx_phylink_mac_config port 28, mode 1, phy-mode: internal, speed 10000, link 0
+[    7.929938] rtl83xx-switch switch@1b000000 lan1 (uninitialized): no phy at 0
+[    7.937850] rtl83xx-switch switch@1b000000 lan1 (uninitialized): failed to connect to PHY: -ENODEV
+[    7.947859] rtl83xx-switch switch@1b000000 lan1 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 0
+[    7.959945] rtl83xx-switch switch@1b000000 lan2 (uninitialized): no phy at 1
+[    7.967863] rtl83xx-switch switch@1b000000 lan2 (uninitialized): failed to connect to PHY: -ENODEV
+[    7.977879] rtl83xx-switch switch@1b000000 lan2 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 1
+[    7.989961] rtl83xx-switch switch@1b000000 lan3 (uninitialized): no phy at 2
+[    7.997881] rtl83xx-switch switch@1b000000 lan3 (uninitialized): failed to connect to PHY: -ENODEV
+[    8.007886] rtl83xx-switch switch@1b000000 lan3 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 2
+[    8.019970] rtl83xx-switch switch@1b000000 lan4 (uninitialized): no phy at 3
+[    8.027890] rtl83xx-switch switch@1b000000 lan4 (uninitialized): failed to connect to PHY: -ENODEV
+[    8.037894] rtl83xx-switch switch@1b000000 lan4 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 3
+[    8.049977] rtl83xx-switch switch@1b000000 lan5 (uninitialized): no phy at 4
+[    8.057913] rtl83xx-switch switch@1b000000 lan5 (uninitialized): failed to connect to PHY: -ENODEV
+[    8.067926] rtl83xx-switch switch@1b000000 lan5 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 4
+[    8.080003] rtl83xx-switch switch@1b000000 lan6 (uninitialized): no phy at 5
+[    8.087928] rtl83xx-switch switch@1b000000 lan6 (uninitialized): failed to connect to PHY: -ENODEV
+[    8.097943] rtl83xx-switch switch@1b000000 lan6 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 5
+[    8.110022] rtl83xx-switch switch@1b000000 lan7 (uninitialized): no phy at 6
+[    8.117944] rtl83xx-switch switch@1b000000 lan7 (uninitialized): failed to connect to PHY: -ENODEV
+[    8.127948] rtl83xx-switch switch@1b000000 lan7 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 6
+[    8.140032] rtl83xx-switch switch@1b000000 lan8 (uninitialized): no phy at 7
+[    8.147952] rtl83xx-switch switch@1b000000 lan8 (uninitialized): failed to connect to PHY: -ENODEV
+[    8.157958] rtl83xx-switch switch@1b000000 lan8 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 7
+[    8.170090] rtl83xx-switch switch@1b000000 lan9 (uninitialized): no phy at 24
+[    8.178102] rtl83xx-switch switch@1b000000 lan9 (uninitialized): failed to connect to PHY: -ENODEV
+[    8.188106] rtl83xx-switch switch@1b000000 lan9 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 24
+[    8.200294] rtl83xx-switch switch@1b000000 lan10 (uninitialized): no phy at 25
+[    8.208400] rtl83xx-switch switch@1b000000 lan10 (uninitialized): failed to connect to PHY: -ENODEV
+[    8.218502] rtl83xx-switch switch@1b000000 lan10 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 25
+[    8.230777] rtl83xx-switch switch@1b000000 lan11 (uninitialized): no phy at 26
+[    8.238883] rtl83xx-switch switch@1b000000 lan11 (uninitialized): failed to connect to PHY: -ENODEV
+[    8.248984] rtl83xx-switch switch@1b000000 lan11 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 26
+[    8.262324] DSA: tree 0 setup
+[    8.265679] LINK state irq: 23
+[    8.269169] In rtl83xx_setup_qos
+[    8.272821] L3_IPUC_ROUTE_CTRL 00002000, IPMC_ROUTE 0000077e, IP6UC_ROUTE 00014400, IP6MC_ROUTE 0001db7e
+[    8.283400] L3_IPUC_ROUTE_CTRL 00002001, IPMC_ROUTE 00000501, IP6UC_ROUTE 00014581, IP6MC_ROUTE 00012881
+[    8.293970] L3_IP_ROUTE_CTRL 0000013f
+[    8.298200] rtl930x_dbgfs_init called
+[    8.302761] rtl93xx_phylink_mac_config port 28, mode 1, phy-mode: internal, speed 10000, link 1
+[    8.312537] rtl83xx-switch switch@1b000000: Link is Up - 10Gbps/Full - flow control off
+[    8.322435] rtl83xx_fib_event_work_do: FIB4 default rule failed
+[    8.329106] rtl83xx_fib_event_work_do: FIB4 default rule failed
+[    8.381941] Freeing unused kernel image (initmem) memory: 10388K
+[    8.388689] This architecture does not have kernel memory protection.
+[    8.395859] Run /init as init process
+[    8.399950]   with arguments:
+[    8.403245]     /init
+[    8.405764]   with environment:
+[    8.409266]     HOME=/
+[    8.411882]     TERM=linux
+[    8.882757] init: Console is alive
+[    8.887189] init: - watchdog -
+[    8.910581] kmodloader: loading kernel modules from /etc/modules-boot.d/*
+[    8.924341] kmodloader: done loading kernel modules from /etc/modules-boot.d/*
+[    8.943040] init: - preinit -
+[    9.192387] random: jshn: uninitialized urandom read (4 bytes read)
+[    9.291287] random: jshn: uninitialized urandom read (4 bytes read)
+[    9.569074] random: jshn: uninitialized urandom read (4 bytes read)
+[    9.746155] RESETTING 9300, CPU_PORT 28
+[    9.950807] rtl838x-eth 1b00a300.ethernet eth0: configuring for fixed/internal link mode
+[    9.959821] In rtl838x_mac_config, mode 1
+[    9.965130] rtl83xx-switch switch@1b000000 lan12: configuring for fixed/10gbase-r link mode
+[    9.974513] rtl93xx_phylink_mac_config port 27, mode 1, phy-mode: 10gbase-r, speed 10000, link 0
+[    9.984320] rtl93xx_phylink_mac_config SDS is 9
+[    9.990378] rtl9300_phy_enable_10g_1g 1gbit phy: 00001140
+[    9.996376] rtl9300_phy_enable_10g_1g 1gbit phy enabled: 00001140
+[   10.004169] rtl9300_phy_enable_10g_1g 10gbit phy: 00002040
+[   10.010289] rtl9300_phy_enable_10g_1g 10gbit phy after: 00002040
+[   10.017995] rtl9300_phy_enable_10g_1g set medium: 00000000
+[   10.024095] rtl9300_phy_enable_10g_1g set medium after: 00000002
+[   10.030792] rtl9300_sds_set 26
+[   10.044175] start_1.1.1 initial value for sds 9
+[   10.077241] end_1.1.1 --
+[   10.080058] start_1.1.2 Load DFE init. value
+[   10.085794] end_1.1.2
+[   10.088334] start_1.1.3 disable LEQ training,enable DFE clock
+[   10.100728] end_1.1.3 --
+[   10.103537] start_1.1.4 offset cali setting
+[   10.109203] end_1.1.4
+[   10.111725] start_1.1.5 LEQ and DFE setting
+[   10.123371] end_1.1.5
+[   10.132898] start_1.2.1 ForegroundOffsetCal_Manual
+[   10.140246] end_1.2.1
+[   10.148250] start_1.2.3 Foreground Calibration
+[   10.161712] rtl9300_do_rx_calibration_2_3: fgcal_gray: 20, fgcal_binary 20
+[   10.170381] rtl9300_do_rx_calibration_2_3: end_1.2.3
+[   10.175895] start_1.4.1
+[   10.397623] end_1.4.1
+[   10.400344] start_1.4.2
+[   10.408871] vth_set_bin = 4
+[   10.411588] vth_set_bin = 2
+[   10.415683] Vth Maunal = 1
+[   10.527676] Tap0 Sign : +
+[   10.530685] tap0_coef_bin = 20
+[   10.534587] tap0 manual = 1
+[   10.540991] end_1.4.2
+[   10.544087] start_1.5.2
+[   10.620535] end_1.5.2
+[   10.701315] 8021q: adding VLAN 0 to HW filter on device lan12
+[   10.710589] rtl838x-eth 1b00a300.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[   10.719934] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   10.727013] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   10.734357] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   10.751212] rtl83xx_fib_event_work_do: FIB4 failed
+[   10.756564] rtl83xx_fib_event_work_do: FIB4 failed
+[   10.770705] random: procd: uninitialized urandom read (4 bytes read)
+[   10.780324] rtl83xx_fib_event_work_do: FIB4 failed
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[   12.736719] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   12.928350] rtl83xx_fib4_del: no such gateway: 0.0.0.0
+[   12.934094] rtl83xx_fib4_del: no such gateway: 0.0.0.0
+[   12.957284] rtl83xx_fib4_del: no such gateway: 0.0.0.0
+[   12.965753] procd: - early -
+[   12.969360] procd: - watchdog -
+[   13.622736] procd: - watchdog -
+[   13.626829] procd: - ubus -
+[   13.639333] random: ubusd: uninitialized urandom read (4 bytes read)
+[   13.680155] random: ubusd: uninitialized urandom read (4 bytes read)
+[   13.687875] random: ubusd: uninitialized urandom read (4 bytes read)
+[   13.698247] procd: - init -
+Please press Enter to activate this console.
+[   14.355480] kmodloader: loading kernel modules from /etc/modules.d/*
+[   14.380764] GACT probability on
+[   14.397777] Mirror/redirect action on
+[   14.422124] u32 classifier
+[   14.425149]     input device check on
+[   14.429272]     Actions configured
+[   14.615437] kmodloader: done loading kernel modules from /etc/modules.d/*
+[   14.761075] urngd: v1.0.2 started.
+[   14.960128] random: crng init done
+[   14.963925] random: 19 urandom warning(s) missed due to ratelimiting
+[   17.254959] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   42.647356] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   42.717955] in rtl838x_eth_stop
+[   42.721539] rtl838x-eth 1b00a300.ethernet eth0: Link is Down
+[   43.240159] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   43.247542] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   43.254825] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   43.262175] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   44.036979] RESETTING 9300, CPU_PORT 28
+[   44.241630] rtl838x-eth 1b00a300.ethernet eth0: configuring for fixed/internal link mode
+[   44.250629] In rtl838x_mac_config, mode 1
+[   44.255372] rtl838x-eth 1b00a300.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[   44.267850] rtl83xx-switch switch@1b000000 lan12: configuring for fixed/10gbase-r link mode
+[   44.277226] rtl93xx_phylink_mac_config port 27, mode 1, phy-mode: 10gbase-r, speed 10000, link 0
+[   44.287063] rtl93xx_phylink_mac_config SDS is 9
+[   44.293104] rtl9300_phy_enable_10g_1g 1gbit phy: 00001140
+[   44.299141] rtl9300_phy_enable_10g_1g 1gbit phy enabled: 00001140
+[   44.306932] rtl9300_phy_enable_10g_1g 10gbit phy: 00002040
+[   44.313032] rtl9300_phy_enable_10g_1g 10gbit phy after: 00002040
+[   44.320731] rtl9300_phy_enable_10g_1g set medium: 00000000
+[   44.326852] rtl9300_phy_enable_10g_1g set medium after: 00000002
+[   44.333524] rtl9300_sds_set 26
+[   44.346935] start_1.1.1 initial value for sds 9
+[   44.379990] end_1.1.1 --
+[   44.382810] start_1.1.2 Load DFE init. value
+[   44.388577] end_1.1.2
+[   44.391094] start_1.1.3 disable LEQ training,enable DFE clock
+[   44.403496] end_1.1.3 --
+[   44.406305] start_1.1.4 offset cali setting
+[   44.411979] end_1.1.4
+[   44.414502] start_1.1.5 LEQ and DFE setting
+[   44.426164] end_1.1.5
+[   44.435692] start_1.2.1 ForegroundOffsetCal_Manual
+[   44.443038] end_1.2.1
+[   44.451040] start_1.2.3 Foreground Calibration
+[   44.464501] rtl9300_do_rx_calibration_2_3: fgcal_gray: 20, fgcal_binary 20
+[   44.473180] rtl9300_do_rx_calibration_2_3: end_1.2.3
+[   44.478726] start_1.4.1
+[   44.700448] end_1.4.1
+[   44.703166] start_1.4.2
+[   44.711701] vth_set_bin = 4
+[   44.714418] vth_set_bin = 2
+[   44.718546] Vth Maunal = 1
+[   44.830536] Tap0 Sign : +
+[   44.833552] tap0_coef_bin = 20
+[   44.837482] tap0 manual = 1
+[   44.843865] end_1.4.2
+[   44.846995] start_1.5.2
+[   44.923438] end_1.5.2
+[   45.004217] 8021q: adding VLAN 0 to HW filter on device lan12
+[   45.015188] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   45.022314] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   45.029724] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   45.038408] switch: port 1(lan12) entered blocking state
+[   45.044348] switch: port 1(lan12) entered disabled state
+[   45.051327] device lan12 entered promiscuous mode
+[   45.056580] device eth0 entered promiscuous mode
+[   45.087665] rtl930x_set_l3_egress_intf writing to index 0: 00000201 10101492
+[   45.097305] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   45.105729] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   45.132720] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   46.257042] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   46.264384] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
