@@ -1,0 +1,335 @@
+RTL9300# # bootm 0x82000000
+## Booting kernel from Legacy Image at 82000000 ...
+   Image Name:   MIPS OpenWrt Linux-5.15.110
+   Created:      2023-05-07  13:58:53 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    5151534 Bytes = 4.9 MB
+   Load Address: 80100000
+   Entry Point:  80100000
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Linux version 5.15.110 (builder@buildhost) (mips-openwrt-linux-musl-gcc (OpenWrt GCC 12.2.0 r22997-a8bf48e15c) 12.2.0, GNU ld (GNU Binutils) 2.40.0) #0 SMP Sun May 7 13:58:53 2023
+[    0.000000] printk: bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019555 (MIPS 34Kc)
+[    0.000000] SoC: Realtek RTL9303 v1 ([0x93030001] variant: 10G VER: 1 MCID: 0x0 ID: 0x6487)
+[    0.000000] MIPS: machine is Zyxel XGS1250-12 Switch
+[    0.000000] earlycon: ns16550a0 at MMIO 0x18002000 (options '115200n8')
+[    0.000000] printk: bootconsole [ns16550a0] enabled
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Calling board specific registration of SMP ops
+[    0.000000] Detected 1 available secondary CPU(s)
+[    0.000000] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] percpu: Embedded 12 pages/cpu s16784 r8192 d24176 u49152
+[    0.000000] pcpu-alloc: s16784 r8192 d24176 u49152 alloc=12*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 32480
+[    0.000000] Kernel command line: earlycon
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes, linear)
+[    0.000000] Writing ErrCtl register=000051d2
+[    0.000000] Readback ErrCtl register=000051d2
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 109064K/131072K available (6928K kernel code, 665K rwdata, 1476K rodata, 11276K init, 226K bss, 22008K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=128, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] NR_IRQS: 256
+[    0.000000] rtl83xx-clk: initialized, SW 2450 MHz, CPU 800 MHz, MEM 600 MHz, LXB 175 MHz
+[    0.000000] clocksource: realtek_otto_timer: mask: 0xfffffff max_cycles: 0xfffffff, max_idle_ns: 38225208801 ns
+[    0.000002] sched_clock: 28 bits at 3125kHz, resolution 320ns, wraps every 42949672800ns
+[    0.008947] Failed to request irq 7 (timer)
+[    0.013500] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 4778151116 ns
+[    0.023442] Calibrating delay loop... 531.66 BogoMIPS (lpj=2658304)
+[    0.075701] pid_max: default: 32768 minimum: 301
+[    0.081740] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.089775] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.103649] rcu: Hierarchical SRCU implementation.
+[    0.110081] smp: Bringing up secondary CPUs ...
+[    0.116507] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.116547] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.116643] CPU1 revision is: 00019555 (MIPS 34Kc)
+[    0.168948] Synchronize counters for CPU 1: done.
+[    0.195127] smp: Brought up 1 node, 2 CPUs
+[    0.206386] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.217176] futex hash table entries: 512 (order: 4, 65536 bytes, linear)
+[    0.224993] pinctrl core: initialized pinctrl subsystem
+[    0.232901] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.245163] FPU Affinity set after 10620 emulations
+[    0.273317] rtl83xx-clk lexra-busp:clock-controller: rate setting enabled, SW 2450-2450 MHz, CPU 400-975 MHz, MEM 600-600 MHz, LXB 175-175 MHz, OVERCLOCK AT OWN RISK
+[    0.290403] usbcore: registered new interface driver usbfs
+[    0.296514] usbcore: registered new interface driver hub
+[    0.302463] usbcore: registered new device driver usb
+[    0.310534] clocksource: Switched to clocksource realtek_otto_timer
+[    0.319367] NET: Registered PF_INET protocol family
+[    0.325019] IP idents hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.334155] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+[    0.343367] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.351893] TCP established hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.360269] TCP bind hash table entries: 1024 (order: 1, 8192 bytes, linear)
+[    0.368032] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.375240] UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    0.382488] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    0.390787] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.401693] workingset: timestamp_bits=14 max_order=15 bucket_order=1
+[    0.420696] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.427133] jffs2: version 2.2 (NAND) (SUMMARY) (ZLIB) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.442070] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    0.454255] pinctrl-single 1b00cc00.pinmux: 32 pins, size 4
+[    0.463986] Serial: 8250/16550 driver, 16 ports, IRQ sharing enabled
+[    0.478195] printk: console [ttyS0] disabled
+[    0.483272] 18002000.uart: ttyS0 at MMIO 0x18002000 (irq = 30, base_baud = 10937500) is a 16550A
+[    0.493198] printk: console [ttyS0] enabled
+[    0.493198] printk: console [ttyS0] enabled
+[    0.502717] printk: bootconsole [early0] disabled
+[    0.502717] printk: bootconsole [early0] disabled
+[    0.513364] printk: bootconsole [ns16550a0] disabled
+[    0.513364] printk: bootconsole [ns16550a0] disabled
+[    0.570212] brd: module loaded
+[    0.580887] spi-nor spi0.0: mx25l12805d (16384 Kbytes)
+[    0.586841] 3 fixed-partitions partitions found on MTD device spi0.0
+[    0.594328] OF: Bad cell count for /lexra-busp/spi@18001200/flash@0/partitions
+[    0.602695] OF: Bad cell count for /lexra-busp/spi@18001200/flash@0/partitions
+[    0.611675] Creating 3 MTD partitions on "spi0.0":
+[    0.617079] 0x000000000000-0x0000000e0000 : "u-boot"
+[    0.625069] 0x0000000e0000-0x0000000f0000 : "u-boot-env"
+[    0.634187] 0x0000000f0000-0x000001000000 : "firmware"
+[    0.678909] Probing RTL838X eth device pdev: 8208d600, dev: 8208d610
+[    0.753756] Found SoC ID: 9303: RTL9303 v1 ([0x93030001] variant: 10G VER: 1 MCID: 0x0 ID: 0x6487), family 9300
+[    0.765925] Using MAC 000000e04c000000
+[    0.774552] mdio_bus mdio-bus: MDIO device at address 0 is missing.
+[    0.782076] mdio_bus mdio-bus: MDIO device at address 1 is missing.
+[    0.816232] mdio_bus mdio-bus: MDIO device at address 2 is missing.
+[    0.831803] mdio_bus mdio-bus: MDIO device at address 3 is missing.
+[    0.839070] mdio_bus mdio-bus: MDIO device at address 4 is missing.
+[    0.846364] mdio_bus mdio-bus: MDIO device at address 5 is missing.
+[    0.854191] mdio_bus mdio-bus: MDIO device at address 6 is missing.
+[    0.861612] mdio_bus mdio-bus: MDIO device at address 7 is missing.
+[    0.875208] mdio_bus mdio-bus: MDIO device at address 24 is missing.
+[    0.888823] mdio_bus mdio-bus: MDIO device at address 25 is missing.
+[    0.902535] mdio_bus mdio-bus: MDIO device at address 26 is missing.
+[    0.914797] REALTEK RTL9300 SERDES mdio-bus:1b: Detected internal RTL9300 Serdes
+[    0.930015] rtk_gen1_hcd_cs_init: rtk_gen1_hcd_cs_init()!
+[    0.936161] usb_phy_configure_process: usb_phy_configure_process()!
+[    0.943921] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.951304] ehci-platform: EHCI generic platform driver
+[    0.957876] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.964985] ohci-platform: OHCI generic platform driver
+[    0.971624] i2c_dev: i2c /dev entries driver
+[    0.976791] rtl9300_i2c_probe probing I2C adapter
+[    0.982203] i2c-rtl9300 1b00036c.i2c0: SCL speed 100000, mode is 0
+[    0.989176] i2c-rtl9300 1b00036c.i2c0: SCL pin not found in DT, using default
+[    0.997220] rtl9300_i2c_probe scl_num 0
+[    1.001620] i2c-rtl9300 1b00036c.i2c0: SDA pin not found in DT, using default
+[    1.009720] rtl9300_i2c_probe sda_num 0
+[    1.015323] rtl9300_i2c_mux_probe probing I2C adapter
+[    1.021163] rtl9300_i2c_mux_probe base memory bb00036c
+[    1.026981] rtl9300_i2c_mux_probe channel 1 scl_num 0
+[    1.032722] rtl9300_i2c_mux_probe channel 1 sda_num 1
+[    1.039062] i2c i2c-0: Added multiplexed i2c bus 1
+[    1.044534] i2c-mux-rtl9300 lexra-bus0:i2cmux0: 8-port mux on 1b00036c.i2c0 adapter
+[    1.092517] realtek-crypto 1800c000.crypto: 32 KB buffer, max 16 requests of up to 8192 bytes
+[    1.102157] realtek-crypto 1800c000.crypto: ready for AES/SHA1/MD5 crypto acceleration
+[    1.113772] NET: Registered PF_INET6 protocol family
+[    1.122214] Segment Routing with IPv6
+[    1.126406] In-situ OAM (IOAM) with IPv6
+[    1.131136] NET: Registered PF_PACKET protocol family
+[    1.136912] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    1.152064] 8021q: 802.1Q VLAN Support v1.8
+[    1.159197] sfp sfp-p12: Host maximum power 1.0W
+[    1.176141] REALTEK RTL9300 SERDES rtl838x slave mii-0:1b: Detected internal RTL9300 Serdes
+[    1.193459] REALTEK RTL9300 SERDES rtl838x slave mii-0:3f: Detected internal RTL9300 Serdes
+[    1.208430] rtl93xx_setup called
+[    1.212220] In rtl83xx_vlan_setup
+[    1.215923] In rtl930x_vlan_profile_setup
+[    1.220373] In rtl930x_vlan_profile_setup
+[    1.224889] UNKNOWN_MC_PMASK: 000000001fffffff
+[    1.229845] VLAN 0: L2 learn: 0; Unknown MC PMasks: L2 1fffffff, IPv4 1fffffff, IPv6: 1fffffff
+[    1.229859]   Routing enabled: IPv4 UC y, IPv6 UC y, IPv4 MC y, IPv6 MC y
+[    1.247098]   Bridge enabled: IPv4 MC n, IPv6 MC n,
+[    1.252591] VLAN profile 0: raw 00033000 00000000 1fffffff 1fffffff 1fffffff
+[    2.340530] ################# rtl83xx_enable_phy_polling:          f0000ff
+[    2.348205] rtl930x_pie_init
+[    2.351671] rtl930x_led_init called
+[    2.355708] rtl930x_led_init bb00cc00: 01052659
+[    2.360800] rtl930x_led_init bb00cc04: 00005555
+[    2.365852] rtl930x_led_init bb00cc08: 007f0000
+[    2.370941] rtl930x_led_init bb00cc0c: 00000000
+[    2.375998] rtl930x_led_init bb00cc10: 0a200a01
+[    2.381076] rtl930x_led_init bb00cc14: 0a0b0a28
+[    2.386127] rtl930x_led_init bb00cc18: 0a920a0b
+[    2.391204] rtl930x_led_init bb00cc1c: 0b800a30
+[    2.396255] rtl930x_led_init bb00cc20: 0a080a08
+[    2.401351] rtl930x_led_init bb00cc24: 00000000
+[    2.406402] rtl930x_led_init bb00cc28: 0a200bc0
+[    2.411480] rtl930x_led_init bb00cc2c: 00000000
+[    2.416531] rtl930x_led_init bb00cc30: 00ea0000
+[    2.421609] rtl930x_led_init bb00cc34: 00000000
+[    2.426659] rtl930x_led_init bb00cc38: 00ea0000
+[    2.431736] rtl930x_led_init bb00cc3c: 070000ff
+[    2.436788] rtl930x_led_init bb00cc40: 08000000
+[    2.441866] rtl930x_led_init bb00cc44: 0f0000ff
+[    2.446917] rtl930x_led_init bb00cc48: 00000000
+[    2.451998] rtl930x_led_init bb00cc4c: 00000000
+[    2.457046] rtl930x_led_init bb00cc50: 00000000
+[    2.462139] rtl930x_led_init bb00cc54: 00000000
+[    2.467192] rtl930x_led_init bb00cc58: 00000000
+[    2.472269] rtl930x_led_init bb00cc5c: 00000000
+[    2.477822] rtl83xx-switch lexra-bus0:switch@1b000000: configuring for fixed/internal link mode
+[    2.487636] rtl930x_phylink_mac_config port 28, mode 1, phy-mode: internal, speed 1000, link 0
+[    2.497485] rtl83xx-switch lexra-bus0:switch@1b000000 lan1 (uninitialized): no phy at 0
+[    2.506486] rtl83xx-switch lexra-bus0:switch@1b000000 lan1 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.517609] rtl83xx-switch lexra-bus0:switch@1b000000 lan1 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 0
+[    2.530702] rtl930x_phylink_mac_config port 28, mode 1, phy-mode: internal, speed 1000, link 1
+[    2.540316] rtl83xx-switch lexra-bus0:switch@1b000000: Link is Up - 1Gbps/Full - flow control off
+[    2.550708] rtl83xx-switch lexra-bus0:switch@1b000000 lan2 (uninitialized): no phy at 1
+[    2.559639] rtl83xx-switch lexra-bus0:switch@1b000000 lan2 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.570762] rtl83xx-switch lexra-bus0:switch@1b000000 lan2 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 1
+[    2.584459] rtl83xx-switch lexra-bus0:switch@1b000000 lan3 (uninitialized): no phy at 2
+[    2.593504] rtl83xx-switch lexra-bus0:switch@1b000000 lan3 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.604661] rtl83xx-switch lexra-bus0:switch@1b000000 lan3 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 2
+[    2.618174] rtl83xx-switch lexra-bus0:switch@1b000000 lan4 (uninitialized): no phy at 3
+[    2.627187] rtl83xx-switch lexra-bus0:switch@1b000000 lan4 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.638313] rtl83xx-switch lexra-bus0:switch@1b000000 lan4 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 3
+[    2.651600] rtl83xx-switch lexra-bus0:switch@1b000000 lan5 (uninitialized): no phy at 4
+[    2.660615] rtl83xx-switch lexra-bus0:switch@1b000000 lan5 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.671744] rtl83xx-switch lexra-bus0:switch@1b000000 lan5 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 4
+[    2.685037] rtl83xx-switch lexra-bus0:switch@1b000000 lan6 (uninitialized): no phy at 5
+[    2.694056] rtl83xx-switch lexra-bus0:switch@1b000000 lan6 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.705213] rtl83xx-switch lexra-bus0:switch@1b000000 lan6 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 5
+[    2.718514] rtl83xx-switch lexra-bus0:switch@1b000000 lan7 (uninitialized): no phy at 6
+[    2.727518] rtl83xx-switch lexra-bus0:switch@1b000000 lan7 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.738664] rtl83xx-switch lexra-bus0:switch@1b000000 lan7 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 6
+[    2.751973] rtl83xx-switch lexra-bus0:switch@1b000000 lan8 (uninitialized): no phy at 7
+[    2.760982] rtl83xx-switch lexra-bus0:switch@1b000000 lan8 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.772131] rtl83xx-switch lexra-bus0:switch@1b000000 lan8 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 7
+[    2.785481] rtl83xx-switch lexra-bus0:switch@1b000000 lan9 (uninitialized): no phy at 24
+[    2.794585] rtl83xx-switch lexra-bus0:switch@1b000000 lan9 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.805732] rtl83xx-switch lexra-bus0:switch@1b000000 lan9 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 24
+[    2.819143] rtl83xx-switch lexra-bus0:switch@1b000000 lan10 (uninitialized): no phy at 25
+[    2.828341] rtl83xx-switch lexra-bus0:switch@1b000000 lan10 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.839585] rtl83xx-switch lexra-bus0:switch@1b000000 lan10 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 25
+[    2.853066] rtl83xx-switch lexra-bus0:switch@1b000000 lan11 (uninitialized): no phy at 26
+[    2.862269] rtl83xx-switch lexra-bus0:switch@1b000000 lan11 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.873581] rtl83xx-switch lexra-bus0:switch@1b000000 lan11 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 26
+[    2.887116] rtl83xx-switch lexra-bus0:switch@1b000000 lan12 (uninitialized): PHY [mdio-bus:1b] driver [REALTEK RTL9300 SERDES] (irq=POLL)
+[    2.902936] DSA: tree 0 setup
+[    2.906385] LINK state irq: 23
+[    2.909881] rtl930x_switch_irq link faults: 0fffffff
+[    2.909945] In rtl83xx_setup_qos
+[    2.915517] rtl930x_switch_irq link faults: 0fffffff
+[    2.915556] rtl930x_switch_irq link faults: 0fffffff
+[    2.915576] rtl930x_switch_irq link faults: 0fffffff
+[    2.935890] L3_IPUC_ROUTE_CTRL 00002000, IPMC_ROUTE 0000077e, IP6UC_ROUTE 00014400, IP6MC_ROUTE 0001db7e
+[    2.946502] L3_IPUC_ROUTE_CTRL 00002001, IPMC_ROUTE 00000501, IP6UC_ROUTE 00014581, IP6MC_ROUTE 00012881
+[    2.957100] L3_IP_ROUTE_CTRL 0000013f
+[    2.961352] rtl930x_dbgfs_init called
+[    2.965523] rtl83xx_fib_event_work_do: FIB4 default rule failed
+[    2.972453] rtl83xx_fib_event_work_do: FIB4 default rule failed
+[    3.029595] Freeing unused kernel image (initmem) memory: 11276K
+[    3.036362] This architecture does not have kernel memory protection.
+[    3.043590] Run /init as init process
+[    3.047678]   with arguments:
+[    3.051036]     /init
+[    3.053575]   with environment:
+[    3.057059]     HOME=/
+[    3.059675]     TERM=linux
+Illegal instruction
+Illegal instruction
+Illegal instruction
+[    3.630972] init: Console is alive
+[    3.635444] init: - watchdog -
+[    3.650414] init: - preinit -
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Unable to find valid (label) MAC address, using random
+[    4.370207] random: hexdump: uninitialized urandom read (1029 bytes read)
+/bin/board_detect: /etc/board.d/02_network: line 252: arithmetic syntax error
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+Illegal instruction
+[    6.585240] procd: - early -
+[    6.588840] procd: - watchdog -
+[    7.233241] procd: - watchdog -
+[    7.237394] procd: - ubus -
+[    7.250827] random: ubusd: uninitialized urandom read (4 bytes read)
+[    7.291605] random: ubusd: uninitialized urandom read (4 bytes read)
+[    7.299411] random: ubusd: uninitialized urandom read (4 bytes read)
+[    7.312539] procd: - init -
+Please press Enter to activate this console.
+[    9.214203] random: hexdump: uninitialized urandom read (1029 bytes read)
+[    9.672516] random: ubusd: uninitialized urandom read (4 bytes read)
+[    9.986299] random: ubusd: uninitialized urandom read (4 bytes read)
+[   10.252613] random: ubusd: uninitialized urandom read (4 bytes read)
+[   13.220567] random: crng init done
+[   13.224393] random: 15 urandom warning(s) missed due to ratelimiting

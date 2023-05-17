@@ -1,0 +1,217 @@
+Z���␀
+
+U-Boot 2011.12.(3.6.1.1)-svn11616 (Jun 28 2021 - 00:45:24)
+
+Board: RTL9300 CPU:800MHz LX:175MHz DDR:600MHz SPIF:51MHz
+DRAM:  256 MB
+SPI-F: MXIC/C22018/MMIO16-1/ModeC 1x16 MB (plr_flash_info @ 83f857c4)
+Loading 65536B env. variables from offset 0x1e0000
+Net:   Net Initialization Skipped
+No ethernet found.
+RTCORE Driver Module Initialize
+  IOAL init
+  Hardware-profile probe (RTL9303_2x84892_1x84891)
+  Hardware-profile init
+  GPIO probe (unit 0): (found)
+  GPIO Init
+  SPI init (unit 0) (type3)
+    SPI Master init
+  I2C probe (unit 0)
+  I2C init (unit 0)
+  NIC probe (unit 0)
+  Loader RTNIC Driver Module Initialize
+RTK Driver Module Initialize
+  MAC probe (unit 0)
+    Chip 9303 (found)
+  MAC init (unit 0)
+  PHY probe (unit 0)
+probe  0.8 ......
+ 0.8 id0=0x3590, id1=0x5081
+probe  0.16 ......
+ 0.16 id0=0x3590, id1=0x50a1
+probe  0.20 ......
+ 0.20 id0=0x3590, id1=0x50a1
+probe  0.24 ......
+ 0.24 id0=0x3590, id1=0x50a1
+probe  0.25 ......
+ 0.25 id0=0x3590, id1=0x50a1
+  Chip Construct (unit 0)
+    Chip Construct
+    Disable PHY Polling
+    PHY Reset
+    MAC Construct
+    Turn Off Serdes
+    Serdes Construct
+    PHY Construct
+    Turn On Serdes
+    Enable PHY Polling
+    Misc
+  PHY init (unit 0)
+Chip found!!! Initializing PHY....
+interface_config_set
+interface_config_set kr_enable=0, usx_enable=1, usx_autoneg=1,
+Chip found!!! Initializing PHY....
+interface_config_set
+interface_config_set kr_enable=0, usx_enable=1, usx_autoneg=1,
+Chip found!!! Initializing PHY....
+interface_config_set
+interface_config_set kr_enable=0, usx_enable=1, usx_autoneg=1,
+Chip found!!! Initializing PHY....
+interface_config_set
+interface_config_set kr_enable=0, usx_enable=1, usx_autoneg=1,
+Chip found!!! Initializing PHY....
+interface_config_set
+interface_config_set kr_enable=0, usx_enable=1, usx_autoneg=1,
+  Mgmt_dev init (unit 0) 
+Hit Esc key to stop autoboot:  1  0 
+## Booting image from partition ... 0
+## Booting kernel from Legacy Image at 81000000 ...
+   Image Name:   SW-UX1105TT_1.00-0.09
+   Created:      2021-06-28   0:46:48 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    5372232 Bytes = 5.1 MB
+   Load Address: 80000000
+   Entry Point:  8027a790
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+console [ttyS0] enabled
+bootconsole [early0] disabled
+Calibrating delay loop... 531.66 BogoMIPS (lpj=2658304)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+NET: Registered protocol family 16
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+NET: Registered protocol family 2
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 2048 (order: 3, 40960 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+TCP: reno registered
+UDP hash table entries: 256 (order: 1, 12288 bytes)
+UDP-Lite hash table entries: 256 (order: 1, 12288 bytes)
+NET: Registered protocol family 1
+futex hash table entries: 256 (order: 0, 7168 bytes)
+msgmni has been set to 491
+random: modprobe urandom read with 1 bits of entropy available
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 1 ports, IRQ sharing disabled
+serial8250: ttyS0 at MMIO 0x0 (irq = 39, base_baud = 10764700) is a 16550A
+RTK_SPI_FLASH_MIO driver is bypassed
+RTK_NORSFG3 driver is used
+=================================================================
+init_luna_nor_spi_map: flash map at 0xb4000000
+SPI NOR driver probe...
+MXIC/C22018/MMIO16-1/ModeC add SPI NOR partition
+MTD partitions obtained from built-in array
+Creating 7 MTD partitions on "rtk_norsf_g3":
+0x000000000000-0x0000001e0000 : "LOADER"
+0x0000001e0000-0x0000001f0000 : "BDINFO"
+0x0000001f0000-0x000000200000 : "SYSINFO"
+0x000000200000-0x000000280000 : "JFFS2 CFG"
+0x000000280000-0x000000300000 : "JFFS2 LOG"
+0x000000300000-0x000000980000 : "RUNTIME"
+0x000000980000-0x000001000000 : "RUNTIME2"
+=================================================================
+usbcore: registered new interface driver usbtmc
+usbcore: registered new interface driver usb-storage
+TCP: cubic registered
+NET: Registered protocol family 17
+Freeing unused kernel memory: 4128K (80398000 - 807a0000)
+init started:  BusyBox v1.00 (2021.06.28-07:44+0000) multi-call binary
+Starting pid 25, console : '/etc/rc'
+RTCORE LKM Insert...
+
+allocate mem to rtcore_devices[0].rt_data=0x8fc9f000
+RTCORE Driver Module Initialize
+  IOAL init
+  Log init
+  Hardware-profile probe (RTL9303_2x84892_1x84891)
+  Hardware-profile init
+  GPIO probe (unit 0): (found)
+  GPIO Init
+  SPI init (unit 0) (type3)
+    SPI Master init
+  TC probe (unit 0): (found)
+  TC init (unit 0)
+    TC util init (unit 0)
+    TC util init (isr)
+  Watchdog probe (unit 0): (found)
+  Watchdog init (unit 0)
+  I2C probe (unit 0)
+  I2C init (unit 0)
+  NIC probe (unit 0)
+  L2Ntfy probe (unit 0): (found)
+RTK Driver Module Initialize
+  MAC probe (unit 0)
+    Chip 9303 (found)
+  MAC init (unit 0)
+  PHY probe (unit 0)
+probe  0.8 ......
+ 0.8 id0=0x3590, id1=0x5081
+probe  0.16 ......
+ 0.16 id0=0x3590, id1=0x50a1
+probe  0.20 ......
+ 0.20 id0=0x3590, id1=0x50a1
+probe  0.24 ......
+ 0.24 id0=0x3590, id1=0x50a1
+probe  0.25 ......
+ 0.25 id0=0x3590, id1=0x50a1
+  Chip Construct (unit 0)
+    Chip Construct
+    Disable PHY Polling
+    PHY Reset
+    MAC Construct
+    Turn Off Serdes
+    Serdes Construct
+    PHY Construct
+    Turn On Serdes
+    Enable PHY Polling
+    Misc
+  PHY init (unit 0)
+>>>>>>>>>>> HWP_RTL9303_2x84892_1x84891 target, port count=5! 
+Chip found!!! Initializing PHY....
+interface_config_set
+interface_config_set kr_enable=0, usx_enable=1, usx_autoneg=1,
+Chip found!!! Initializing PHY....
+interface_config_set
+interface_config_set kr_enable=0, usx_enable=1, usx_autoneg=1,
+Chip found!!! Initializing PHY....
+interface_config_set
+interface_config_set kr_enable=0, usx_enable=1, usx_autoneg=1,
+Chip found!!! Initializing PHY....
+interface_config_set
+interface_config_set kr_enable=0, usx_enable=1, usx_autoneg=1,
+Chip found!!! Initializing PHY....
+interface_config_set
+interface_config_set kr_enable=0, usx_enable=1, usx_autoneg=1,
+  Mgmt_dev init (unit 0) 
+setup_port_init():1986,set ARP to CPU
+setup_port_init():2031,set da is device's mac
+edimax_stopIpTraffic! 
+Loopback detection function is (1) 
+EEE function is (1) 
+QOS function is (1) 
+set qos to port:priority,  pt8:7,pt16:6,pt20:5,pt24:4,pt25:3
+set group_id:0 port based weight:8
+osal_thread_create ret=40! 
+_lbd_thread  init
+set flow control system pause threshold, high off:0xa1e,low on:0x910
+set flow control jumbo system pause threshold, low on:0xc1a
+set flow control port pause page number:100
+RTNIC Driver Module Initialize
+RTDRV Driver Module Initialize
+route: not found
+Starting web server on port 80
+edimaxSystemInit():140,Edimax System Init
+edimaxSystemInit():157, configure ip cmd <ifconfig eth0 1.1.10.100>
+RTK.0> lbd_acl_set 
+lbd_acl_set():1327  sys mac address 78:2d:7e:13:ee:bc
+register edimax_pkt_handler! 
