@@ -1,0 +1,382 @@
+RTL9300# # bootm 0x82000000
+## Booting kernel from Legacy Image at 82000000 ...
+   Image Name:   MIPS OpenWrt Linux-5.15.112
+   Created:      2023-05-19   9:42:50 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    5117592 Bytes = 4.9 MB
+   Load Address: 80100000
+   Entry Point:  80100000
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Linux version 5.15.112 (builder@buildhost) (mips-openwrt-linux-musl-gcc (OpenWrt GCC 12.3.0 r22961+246-76f241ad57) 12.3.0, GNU ld (GNU Binutils) 2.40.0) #0 SMP Fri May 19 09:42:50 2023
+[    0.000000] printk: bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019555 (MIPS 34Kc)
+[    0.000000] SoC: Realtek RTL9303 v1 ([0x93030001] variant: 10G VER: 1 MCID: 0x0 ID: 0x6487)
+[    0.000000] MIPS: machine is Trendnet TEG-S750 Switch
+[    0.000000] earlycon: ns16550a0 at MMIO 0x18002000 (options '115200n8')
+[    0.000000] printk: bootconsole [ns16550a0] enabled
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Calling board specific registration of SMP ops
+[    0.000000] Detected 1 available secondary CPU(s)
+[    0.000000] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x000000000fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x000000000fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000000fffffff]
+[    0.000000] percpu: Embedded 12 pages/cpu s16784 r8192 d24176 u49152
+[    0.000000] pcpu-alloc: s16784 r8192 d24176 u49152 alloc=12*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 64960
+[    0.000000] Kernel command line: earlycon
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+[    0.000000] Writing ErrCtl register=0002519e
+[    0.000000] Readback ErrCtl register=0002519e
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 239212K/262144K available (6941K kernel code, 660K rwdata, 1484K rodata, 10940K init, 226K bss, 22932K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=128, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] NR_IRQS: 256
+[    0.000000] rtl83xx-clk: initialized, SW 2450 MHz, CPU 800 MHz, MEM 600 MHz, LXB 175 MHz
+[    0.000000] clocksource: realtek_otto_timer: mask: 0xfffffff max_cycles: 0xfffffff, max_idle_ns: 38225208801 ns
+[    0.000002] sched_clock: 28 bits at 3125kHz, resolution 320ns, wraps every 42949672800ns
+[    0.008917] Failed to request irq 7 (timer)
+[    0.013475] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 4778151116 ns
+[    0.023417] Calibrating delay loop... 531.66 BogoMIPS (lpj=2658304)
+[    0.075711] pid_max: default: 32768 minimum: 301
+[    0.081776] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.089820] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.103687] rcu: Hierarchical SRCU implementation.
+[    0.110102] smp: Bringing up secondary CPUs ...
+[    0.116494] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.116533] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.116630] CPU1 revision is: 00019555 (MIPS 34Kc)
+[    0.168949] Synchronize counters for CPU 1: done.
+[    0.195147] smp: Brought up 1 node, 2 CPUs
+[    0.205316] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.216110] futex hash table entries: 512 (order: 4, 65536 bytes, linear)
+[    0.223923] pinctrl core: initialized pinctrl subsystem
+[    0.231742] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.244017] FPU Affinity set after 10620 emulations
+[    0.271017] rtl83xx-clk lexra-busp:clock-controller: rate setting enabled, SW 2450-2450 MHz, CPU 400-975 MHz, MEM 600-600 MHz, LXB 175-175 MHz, OVERCLOCK AT OWN RISK
+[    0.288080] usbcore: registered new interface driver usbfs
+[    0.294305] usbcore: registered new interface driver hub
+[    0.300242] usbcore: registered new device driver usb
+[    0.308126] clocksource: Switched to clocksource realtek_otto_timer
+[    0.316975] NET: Registered PF_INET protocol family
+[    0.322687] IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.331973] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+[    0.341175] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.349707] TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    0.358195] TCP bind hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.366029] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.373212] UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    0.380450] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    0.388744] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.399770] workingset: timestamp_bits=14 max_order=16 bucket_order=2
+[    0.418975] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.425412] jffs2: version 2.2 (NAND) (SUMMARY) (ZLIB) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.440311] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    0.452310] pinctrl-single 1b00cc00.pinmux: 32 pins, size 4
+[    0.462592] Serial: 8250/16550 driver, 16 ports, IRQ sharing enabled
+[    0.476725] printk: console [ttyS0] disabled
+[    0.481726] 18002000.uart: ttyS0 at MMIO 0x18002000 (irq = 30, base_baud = 10937500) is a 16550A
+[    0.491606] printk: console [ttyS0] enabled
+[    0.491606] printk: console [ttyS0] enabled
+[    0.501083] printk: bootconsole [early0] disabled
+[    0.501083] printk: bootconsole [early0] disabled
+[    0.511744] printk: bootconsole [ns16550a0] disabled
+[    0.511744] printk: bootconsole [ns16550a0] disabled
+[    0.565794] brd: module loaded
+[    0.573373] spi-nor spi0.0: mx25l12805d (16384 Kbytes)
+[    0.579544] 3 fixed-partitions partitions found on MTD device spi0.0
+[    0.586837] OF: Bad cell count for /lexra-busp/spi@18001200/flash@0/partitions
+[    0.595255] OF: Bad cell count for /lexra-busp/spi@18001200/flash@0/partitions
+[    0.604107] Creating 3 MTD partitions on "spi0.0":
+[    0.609638] 0x000000000000-0x0000000e0000 : "u-boot"
+[    0.616999] 0x0000000e0000-0x0000000f0000 : "u-boot-env"
+[    0.624885] 0x0000000f0000-0x000001000000 : "firmware"
+[    0.724386] Probing RTL838X eth device pdev: 82096200, dev: 82096210
+[    0.797658] Found SoC ID: 9303: RTL9303 v1 ([0x93030001] variant: 10G VER: 1 MCID: 0x0 ID: 0x6487), family 9300
+[    0.809670] Using MAC 000000e04c000000
+[    1.069290] mdio_bus mdio-bus: MDIO device at address 20 is missing.
+[    1.100575] mdio_bus mdio-bus: MDIO device at address 25 is missing.
+[    1.132027] mdio_bus mdio-bus: MDIO device at address 25 is missing.
+[    1.145854] rtk_gen1_hcd_cs_init: rtk_gen1_hcd_cs_init()!
+[    1.152034] usb_phy_configure_process: usb_phy_configure_process()!
+[    1.159711] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.167058] ehci-platform: EHCI generic platform driver
+[    1.173761] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.180865] ohci-platform: OHCI generic platform driver
+[    1.187625] i2c_dev: i2c /dev entries driver
+[    1.193900] rtl9300_i2c_mux_probe probing I2C adapter
+[    1.205505] leds-gpio leds: Led green:status renamed to green:status_1 due to name collision
+[    1.215633] leds-gpio leds: Led green:activity renamed to green:activity_1 due to name collision
+[    1.226021] leds-gpio leds: Led green:activity renamed to green:activity_2 due to name collision
+[    1.236316] leds-gpio leds: Led green:activity renamed to green:activity_3 due to name collision
+[    1.246785] leds-gpio leds: Led green:activity renamed to green:activity_4 due to name collision
+[    1.300150] realtek-crypto 1800c000.crypto: 32 KB buffer, max 16 requests of up to 8192 bytes
+[    1.309907] realtek-crypto 1800c000.crypto: ready for AES/SHA1/MD5 crypto acceleration
+[    1.321483] NET: Registered PF_INET6 protocol family
+[    1.329891] Segment Routing with IPv6
+[    1.334088] In-situ OAM (IOAM) with IPv6
+[    1.338738] NET: Registered PF_PACKET protocol family
+[    1.344512] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    1.359554] 8021q: 802.1Q VLAN Support v1.8
+[    1.389362] rtl93xx_setup called
+[    1.393010] In rtl83xx_vlan_setup
+[    1.396688] In rtl930x_vlan_profile_setup
+[    1.401235] In rtl930x_vlan_profile_setup
+[    1.405728] UNKNOWN_MC_PMASK: 000000001fffffff
+[    1.410753] VLAN 0: L2 learn: 0; Unknown MC PMasks: L2 1fffffff, IPv4 1fffffff, IPv6: 1fffffff
+[    1.410782]   Routing enabled: IPv4 UC y, IPv6 UC y, IPv4 MC y, IPv6 MC y
+[    1.427947]   Bridge enabled: IPv4 MC n, IPv6 MC n,
+[    1.433428] VLAN profile 0: raw 00033000 00000000 1fffffff 1fffffff 1fffffff
+[    2.498118] ################# rtl83xx_enable_phy_polling:          3110100
+[    2.505790] rtl930x_pie_init
+[    2.509254] rtl930x_led_init called
+[    2.513262] rtl930x_led_init No compatible LED node found
+[    2.519683] rtl83xx-switch lexra-bus0:switch@1b000000: configuring for fixed/internal link mode
+[    2.529494] rtl930x_phylink_mac_config port 28, mode 1, phy-mode: internal, speed 1000, link 0
+[    2.539455] rtl930x_phylink_mac_config port 28, mode 1, phy-mode: internal, speed 1000, link 1
+[    2.539990] rtl83xx-switch lexra-bus0:switch@1b000000 lan1 (uninitialized): PHY [mdio-bus:08] driver [Generic Clause 45 PHY] (irq=POLL)
+[    2.549225] rtl83xx-switch lexra-bus0:switch@1b000000: Link is Up - 1Gbps/Full - flow control off
+[    2.574162] rtl83xx-switch lexra-bus0:switch@1b000000 lan2 (uninitialized): PHY [mdio-bus:10] driver [Generic Clause 45 PHY] (irq=POLL)
+[    2.590375] rtl83xx-switch lexra-bus0:switch@1b000000 lan3 (uninitialized): no phy at 20
+[    2.599532] rtl83xx-switch lexra-bus0:switch@1b000000 lan3 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.610670] rtl83xx-switch lexra-bus0:switch@1b000000 lan3 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 20
+[    2.624166] rtl83xx-switch lexra-bus0:switch@1b000000 lan4 (uninitialized): no phy at 24
+[    2.633286] rtl83xx-switch lexra-bus0:switch@1b000000 lan4 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.644460] rtl83xx-switch lexra-bus0:switch@1b000000 lan4 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 24
+[    2.658418] rtl83xx-switch lexra-bus0:switch@1b000000 lan5 (uninitialized): no phy at 25
+[    2.667449] rtl83xx-switch lexra-bus0:switch@1b000000 lan5 (uninitialized): failed to connect to PHY: -ENODEV
+[    2.678578] rtl83xx-switch lexra-bus0:switch@1b000000 lan5 (uninitialized): error -19 setting up PHY for tree 0, switch 0, port 25
+[    2.692026] DSA: tree 0 setup
+[    2.695390] LINK state irq: 23
+[    2.698893] rtl930x_switch_irq link faults: 0fffffff
+[    2.698956] In rtl83xx_setup_qos
+[    2.704450] rtl930x_switch_irq link faults: 0fffffff
+[    2.704463] rtl930x_switch_irq link faults: 0fffffff
+[    2.708162] L3_IPUC_ROUTE_CTRL 00002000, IPMC_ROUTE 0000077e, IP6UC_ROUTE 00014400, IP6MC_ROUTE 0001db7e
+[    2.713560] rtl930x_switch_irq link faults: 0fffffff
+[    2.735271] L3_IPUC_ROUTE_CTRL 00002001, IPMC_ROUTE 00000501, IP6UC_ROUTE 00014581, IP6MC_ROUTE 00012881
+[    2.745865] L3_IP_ROUTE_CTRL 0000013f
+[    2.750101] rtl930x_dbgfs_init called
+[    2.754253] rtl83xx_fib_event_work_do: FIB4 default rule failed
+[    2.759737] rtl9300_i2c_mux_probe probing I2C adapter
+[    2.761256] rtl83xx_fib_event_work_do: FIB4 default rule failed
+[    2.767964] rtl9300_i2c_mux_probe probing I2C adapter
+[    2.828000] Freeing unused kernel image (initmem) memory: 10940K
+[    2.834769] This architecture does not have kernel memory protection.
+[    2.841994] Run /init as init process
+[    2.846076]   with arguments:
+[    2.849435]     /init
+[    2.851974]   with environment:
+[    2.855458]     HOME=/
+[    2.858112]     TERM=linux
+[    3.409286] init: Console is alive
+[    3.413790] init: - watchdog -
+[    3.439121] kmodloader: loading kernel modules from /etc/modules-boot.d/*
+[    3.451046] gpio-keys: probe of keys failed with error -2
+[    3.459443] kmodloader: done loading kernel modules from /etc/modules-boot.d/*
+[    3.469411] init: - preinit -
+[    3.767339] random: jshn: uninitialized urandom read (4 bytes read)
+[    3.875724] random: jshn: uninitialized urandom read (4 bytes read)
+Unable to find valid (label) MAC address, using random
+[    4.252836] random: hexdump: uninitialized urandom read (1029 bytes read)
+[    4.594499] RESETTING 9300, CPU_PORT 28
+[    4.840317] rtl838x-eth 1b00a300.ethernet eth0: configuring for fixed/internal link mode
+[    4.849405] In rtl838x_mac_config, mode 1
+[    4.854666] rtl83xx-switch lexra-bus0:switch@1b000000 lan1: configuring for phy/usxgmii link mode
+[    4.864648] rtl930x_phylink_mac_config port 8, mode 0, phy-mode: usxgmii, speed -1, link 0
+[    4.873927] rtl930x_phylink_mac_config SDS is 3
+[    4.879018] rtl930x_phylink_mac_config: Unsupported speed: -1
+[    4.885561] 8021q: adding VLAN 0 to HW filter on device lan1
+[    4.892276] In rtl838x_mac_link_up, mode 1
+[    4.896946] rtl838x-eth 1b00a300.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[    4.906350] ------------[ cut here ]------------
+[    4.911637] WARNING: CPU: 1 PID: 22 at drivers/net/phy/phy.c:955 phy_state_machine+0xb0/0x2b8
+[    4.915075] rtl83xx_fib_event_work_do: FIB4 failed
+[    4.921298] Modules linked in: gpio_button_hotplug crc32c_generic
+[    4.921344] CPU: 1 PID: 22 Comm: kworker/1:1 Not tainted 5.15.112 #0
+[    4.921380] Workqueue: events_power_efficient phy_state_machine
+[    4.947133] Stack : 00000000 00000000 00000000 00000004 8087ae68 820f5d14 82105480 8014c9a8
+[    4.956499]         80950000 820f5d5b 820f5b6c 820f5b60 804e9138 00000001 820f5d20 8204ee80
+[    4.965874]         00000000 00000000 8087ae68 820f5b60 ffffefff 00000000 00000000 ffffffea
+[    4.975247]         000000c1 820f5b6c 000000c1 8095b780 8087ae68 00000001 00000000 804e91e8
+[    4.984625]         00000009 00000040 8171b805 821054c0 00000018 80488ad8 00000004 81490004
+[    4.994004]         ...
+[    4.996741] Call Trace:
+[    4.999455] [<80107280>] show_stack+0x28/0xf0
+[    5.004345] [<804244e0>] dump_stack_lvl+0x60/0x80
+[    5.009606] [<8012eeec>] __warn+0x9c/0x124
+[    5.014208] [<8012efd0>] warn_slowpath_fmt+0x5c/0xac
+[    5.019753] [<804e91e8>] phy_state_machine+0xb0/0x2b8
+[    5.025417] [<8014a714>] process_one_work+0x268/0x4a8
+[    5.031075] [<8014af04>] worker_thread+0x15c/0x5c0
+[    5.036441] [<80152d00>] kthread+0x134/0x13c
+[    5.041224] [<80101c58>] ret_from_kernel_thread+0x14/0x1c
+[    5.047264]
+[    5.049079] ---[ end trace a4e34c80724e8f78 ]---
+[    5.049154] rtl83xx_fib_event_work_do: FIB4 failed
+[    5.059693] rtl83xx_fib_event_work_do: FIB4 failed
+[    5.065201] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    5.072424] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[    5.079997] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    6.978170] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[    7.227476] rtl83xx_fib4_del: no such gateway: 0.0.0.0
+[    7.233370] rtl83xx_fib4_del: no such gateway: 0.0.0.0
+[    7.239365] rtl83xx_fib4_del: no such gateway: 0.0.0.0
+[    7.254414] ------------[ cut here ]------------
+[    7.259677] WARNING: CPU: 0 PID: 483 at drivers/net/phy/phy.c:1079 phy_stop+0x60/0x1d8
+[    7.268577] called from state HALTED
+[    7.272564] Modules linked in: gpio_button_hotplug crc32c_generic
+[    7.279415] CPU: 0 PID: 483 Comm: ip Tainted: G        W         5.15.112 #0
+[    7.287277] Stack : 82549b58 801894c8 00000000 00000004 00000000 00000000 825496dc 81490000
+[    7.296600]         80950000 8087ae68 8260ab68 80955b63 00000000 00000001 82549688 8204ce00
+[    7.305937]         00000000 00000000 8087ae68 82549528 ffffefff 00000000 00000000 ffffffea
+[    7.315267]         000000e1 82549534 000000e1 8095b780 8087ae68 00000001 00000000 804e9450
+[    7.324597]         00000009 82549c58 827f7a10 80903440 00000018 80488ad8 00000000 81490000
+[    7.333927]         ...
+[    7.336648] Call Trace:
+[    7.339361] [<80107280>] show_stack+0x28/0xf0
+[    7.344234] [<804244e0>] dump_stack_lvl+0x60/0x80
+[    7.349483] [<8012eeec>] __warn+0x9c/0x124
+[    7.354070] [<8012f000>] warn_slowpath_fmt+0x8c/0xac
+[    7.359595] [<804e9450>] phy_stop+0x60/0x1d8
+[    7.364357] [<804e33a8>] phylink_stop+0x44/0xd0
+[    7.369400] [<807b0474>] dsa_port_disable_rt+0x34/0xc8
+[    7.375135] [<807b2794>] dsa_slave_close+0x24/0xf4
+[    7.380475] [<805b65bc>] __dev_close_many+0x9c/0x114
+[    7.386028] [<805c59d8>] __dev_change_flags+0x190/0x224
+[    7.391852] [<805c5a94>] dev_change_flags+0x28/0x70
+[    7.397288] [<805d6e54>] do_setlink+0x2d4/0xb80
+[    7.402340] [<805d7d8c>] __rtnl_newlink+0x500/0x884
+[    7.407778] [<805d8160>] rtnl_newlink+0x50/0x84
+[    7.412819] [<805d52fc>] rtnetlink_rcv_msg+0x1fc/0x3e4
+[    7.418552] [<80640d74>] netlink_rcv_skb+0xb4/0x160
+[    7.423988] [<80640338>] netlink_unicast+0x24c/0x384
+[    7.429514] [<80640798>] netlink_sendmsg+0x328/0x498
+[    7.435047] [<80590ce8>] ____sys_sendmsg+0xc4/0x240
+[    7.440486] [<80592c34>] ___sys_sendmsg+0x90/0x108
+[    7.445826] [<80592db0>] sys_sendmsg+0x4c/0xb8
+[    7.450772] [<80112110>] syscall_common+0x34/0x58
+[    7.456019]
+[    7.457802] ---[ end trace a4e34c80724e8f79 ]---
+[    7.474947] procd: - early -
+[    7.478599] procd: - watchdog -
+[    8.114018] procd: - watchdog -
+[    8.118271] procd: - ubus -
+[    8.131518] random: ubusd: uninitialized urandom read (4 bytes read)
+[    8.171693] random: ubusd: uninitialized urandom read (4 bytes read)
+[    8.179560] random: ubusd: uninitialized urandom read (4 bytes read)
+[    8.192409] procd: - init -
+Please press Enter to activate this console.
+[    8.830817] kmodloader: loading kernel modules from /etc/modules.d/*
+[    8.843231] GACT probability on
+[    8.849341] Mirror/redirect action on
+[    8.869720] u32 classifier
+[    8.872764]     input device check on
+[    8.876832]     Actions configured
+[    9.011193] kmodloader: done loading kernel modules from /etc/modules.d/*
+[    9.047863] urngd: v1.0.2 started.
+[    9.242610] random: crng init done
+[    9.246435] random: 24 urandom warning(s) missed due to ratelimiting
+[   12.190918] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   21.725317] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   21.761901] in rtl838x_eth_stop
+[   21.765559] In rtl838x_mac_link_down, mode 1
+[   21.770480] rtl838x-eth 1b00a300.ethernet eth0: Link is Down
+[   22.348579] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   22.356081] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   22.363617] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   22.371099] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   22.395271] Using MAC 000069c34c000000
+[   22.406700] RESETTING 9300, CPU_PORT 28
+[   22.650841] rtl838x-eth 1b00a300.ethernet eth0: configuring for fixed/internal link mode
+[   22.659987] In rtl838x_mac_config, mode 1
+[   22.665113] In rtl838x_mac_link_up, mode 1
+[   22.669936] rtl838x-eth 1b00a300.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[   22.681617] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   22.688921] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   22.696544] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   22.711125] device eth0 entered promiscuous mode
+[   22.716391] rtl83xx-switch lexra-bus0:switch@1b000000 lan1: configuring for phy/usxgmii link mode
+[   22.726471] rtl930x_phylink_mac_config port 8, mode 0, phy-mode: usxgmii, speed -1, link 0
+[   22.735827] rtl930x_phylink_mac_config SDS is 3
+[   22.741061] rtl930x_phylink_mac_config: Unsupported speed: -1
+[   22.747844] 8021q: adding VLAN 0 to HW filter on device lan1
+[   22.756818] ------------[ cut here ]------------
+[   22.762184] WARNING: CPU: 0 PID: 300 at drivers/net/phy/phy.c:955 phy_state_machine+0xb0/0x2b8
+[   22.771987] Modules linked in: nft_fib_inet nf_flow_table_ipv6 nf_flow_table_ipv4 nf_flow_table_inet nft_reject_ipv6 nft_reject_ipv4 nft_reject_inet nft_reject nft_redir nft_quota nft_objref nft_numgen nft_nat nft_masq nft_log nft_limit nft_hash nft_flow_offload nft_fib_ipv6 nft_fib_ipv4 nft_fib nft_ct nft_counter nft_chain_nat nf_tables nf_nat nf_flow_table nf_conntrack lzo nfnetlink nf_reject_ipv6 nf_reject_ipv4 nf_log_syslog nf_defrag_ipv6 nf_defrag_ipv4 lzo_rle lzo_decompress lzo_compress libcrc32c sch_tbf sch_ingress sch_htb sch_hfsc em_u32 cls_u32 cls_route cls_matchall cls_fw cls_flow cls_basic act_skbedit act_mirred act_gact crypto_acompress gpio_button_hotplug crc32c_generic
+[   22.839917] CPU: 0 PID: 300 Comm: kworker/0:3 Tainted: G        W         5.15.112 #0
+[   22.848709] Workqueue: events_power_efficient phy_state_machine
+[   22.855404] Stack : 80960000 8018947c 00000000 00000004 8087ae68 827c1d14 82143f80 8014c9a8
+[   22.864798]         80950000 827c1d5b 00000001 827c1b60 804e9138 00000001 827c1d20 8204ce00
+[   22.874177]         00000000 00000000 8087ae68 827c1b60 ffffefff 00000000 00000000 ffffffea
+[   22.883542]         0000012f 827c1b6c 0000012f 8095b780 8087ae68 00000001 00000000 804e91e8
+[   22.892907]         00000009 00000000 8170f805 82143fc0 00000018 80488ad8 00000000 81490000
+[   22.902272]         ...
+[   22.905009] Call Trace:
+[   22.907720] [<80107280>] show_stack+0x28/0xf0
+[   22.912601] [<804244e0>] dump_stack_lvl+0x60/0x80
+[   22.917868] [<8012eeec>] __warn+0x9c/0x124
+[   22.922456] [<8012efd0>] warn_slowpath_fmt+0x5c/0xac
+[   22.928007] [<804e91e8>] phy_state_machine+0xb0/0x2b8
+[   22.933656] [<8014a714>] process_one_work+0x268/0x4a8
+[   22.939326] [<8014af04>] worker_thread+0x15c/0x5c0
+[   22.944683] [<80152d00>] kthread+0x134/0x13c
+[   22.949463] [<80101c58>] ret_from_kernel_thread+0x14/0x1c
+[   22.955499]
+[   22.957426] ---[ end trace a4e34c80724e8f7a ]---
+[   22.964202] switch0: port 1(lan1) entered blocking state
+[   22.970377] switch0: port 1(lan1) entered disabled state
+[   22.977934] device lan1 entered promiscuous mode
+[   23.025862] device switch0 entered promiscuous mode
+[   23.035640] rtl930x_set_l3_egress_intf writing to index 0: 00000201 10101492
+[   23.052935] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   23.063022] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   23.110683] rtl83xx-switch lexra-bus0:switch@1b000000 lan2: configuring for phy/usxgmii link mode
+[   23.120780] rtl930x_phylink_mac_config port 16, mode 0, phy-mode: usxgmii, speed -1, link 0
+[   23.130235] rtl930x_phylink_mac_config SDS is 4
+[   23.135349] rtl930x_phylink_mac_config: Unsupported speed: -1
+[   23.142222] 8021q: adding VLAN 0 to HW filter on device lan2
+[   23.148998] ------------[ cut here ]------------
+[   23.154176] WARNING: CPU: 0 PID: 300 at drivers/net/phy/phy.c:955 phy_state_machine+0xb0/0x2b8
+[   23.163944] Modules linked in: nft_fib_inet nf_flow_table_ipv6 nf_flow_table_ipv4 nf_flow_table_inet nft_reject_ipv6 nft_reject_ipv4 nft_reject_inet nft_reject nft_redir nft_quota nft_objref nft_numgen nft_nat nft_masq nft_log nft_limit nft_hash nft_flow_offload nft_fib_ipv6 nft_fib_ipv4 nft_fib nft_ct nft_counter nft_chain_nat nf_tables nf_nat nf_flow_table nf_conntrack lzo nfnetlink nf_reject_ipv6 nf_reject_ipv4 nf_log_syslog nf_defrag_ipv6 nf_defrag_ipv4 lzo_rle lzo_decompress lzo_compress libcrc32c sch_tbf sch_ingress sch_htb sch_hfsc em_u32 cls_u32 cls_route cls_matchall cls_fw cls_flow cls_basic act_skbedit act_mirred act_gact crypto_acompress gpio_button_hotplug crc32c_generic
+[   23.231928] CPU: 0 PID: 300 Comm: kworker/0:3 Tainted: G        W         5.15.112 #0
+[   23.240696] Workqueue: events_power_efficient phy_state_machine
+[   23.247336] Stack : 80960000 8018947c 00000000 00000004 8087ae68 827c1d14 82143f80 8014c9a8
+[   23.256694]         80950000 827c1d5b 00000001 827c1b60 804e9138 00000001 827c1d20 8204ce00
+[   23.266068]         00000000 00000000 8087ae68 827c1b60 ffffefff 00000000 00000000 ffffffea
+[   23.275441]         00000152 827c1b6c 00000152 8095b780 8087ae68 00000001 00000000 804e91e8
+[   23.284807]         00000009 00000000 8170f805 82143fc0 00000018 80488ad8 00000000 81490000
+[   23.294181]         ...
+[   23.296917] Call Trace:
+[   23.299631] [<80107280>] show_stack+0x28/0xf0
+[   23.304522] [<804244e0>] dump_stack_lvl+0x60/0x80
+[   23.309784] [<8012eeec>] __warn+0x9c/0x124
+[   23.314384] [<8012efd0>] warn_slowpath_fmt+0x5c/0xac
+[   23.319930] [<804e91e8>] phy_state_machine+0xb0/0x2b8
+[   23.325585] [<8014a714>] process_one_work+0x268/0x4a8
+[   23.331233] [<8014af04>] worker_thread+0x15c/0x5c0
+[   23.336591] [<80152d00>] kthread+0x134/0x13c
+[   23.341371] [<80101c58>] ret_from_kernel_thread+0x14/0x1c
+[   23.347407]
+[   23.349172] ---[ end trace a4e34c80724e8f7b ]---
+[   23.357440] switch0: port 2(lan2) entered blocking state
+[   23.363650] switch0: port 2(lan2) entered disabled state
+[   23.372391] device lan2 entered promiscuous mode
+[   23.406469] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   24.498409] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[   24.505905] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
