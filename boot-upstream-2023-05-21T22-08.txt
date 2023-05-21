@@ -1,0 +1,508 @@
+my upstream build with modified dts
+
+RTL9300# # bootm 0x82000000
+## Booting kernel from Legacy Image at 82000000 ...
+   Image Name:   MIPS OpenWrt Linux-5.15.111
+   Created:      2023-05-18   9:35:29 UTC
+   Image Type:   MIPS Linux Kernel Image (gzip compressed)
+   Data Size:    6539113 Bytes = 6.2 MB
+   Load Address: 80100000
+   Entry Point:  80100000
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Linux version 5.15.111 (builder@buildhost) (mips-openwrt-linux-musl-gcc (OpenWrt GCC 12.3.0 r22921-dd1f3f0675) 12.3.0, GNU ld (GNU Binutils) 2.40.0) #0 Thu May 18 09:35:29 2023
+[    0.000000] RTL838X model is 0
+[    0.000000] RTL839X model is 0
+[    0.000000] RTL93XX model is 93030001
+[    0.000000] SoC Type: RTL9303
+[    0.000000] printk: bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019555 (MIPS 34Kc)
+[    0.000000] MIPS: machine is Zyxel XGS1250-12 Switch
+[    0.000000] earlycon: ns16550a0 at MMIO 0x18002000 (options '115200n8')
+[    0.000000] printk: bootconsole [ns16550a0] enabled
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Using appended Device Tree.
+[    0.000000] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 32480
+[    0.000000] Kernel command line: earlycon
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes, linear)
+[    0.000000] Writing ErrCtl register=0000509e
+[    0.000000] Readback ErrCtl register=0000509e
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 111032K/131072K available (6155K kernel code, 617K rwdata, 1328K rodata, 10388K init, 219K bss, 20040K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS: 256
+[    0.000000] Failed to get CPU clock: -2
+[    0.000000] CPU frequency from device tree: 800MHz
+[    0.000000] clocksource: realtek_otto_timer: mask: 0xfffffff max_cycles: 0xfffffff, max_idle_ns: 38225208801 ns
+[    0.000001] sched_clock: 28 bits at 3125kHz, resolution 320ns, wraps every 42949672800ns
+[    0.008970] Calibrating delay loop... 531.66 BogoMIPS (lpj=2658304)
+[    0.065691] pid_max: default: 32768 minimum: 301
+[    0.071738] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.079762] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.095271] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.106061] futex hash table entries: 256 (order: -1, 3072 bytes, linear)
+[    0.113708] pinctrl core: initialized pinctrl subsystem
+[    0.121051] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.145660] clocksource: Switched to clocksource realtek_otto_timer
+[    0.154228] NET: Registered PF_INET protocol family
+[    0.159867] IP idents hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.168814] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 4096 bytes, linear)
+[    0.178023] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.186506] TCP established hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.194859] TCP bind hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.202578] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.209710] UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.216930] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.224985] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.306133] workingset: timestamp_bits=14 max_order=15 bucket_order=1
+[    0.319364] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.325816] jffs2: version 2.2 (NAND) (SUMMARY) (ZLIB) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.367230] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    0.387255] pinctrl-single 1b00cc00.pinmux: 32 pins, size 4
+[    0.394817] Serial: 8250/16550 driver, 16 ports, IRQ sharing enabled
+[    0.405125] printk: console [ttyS0] disabled
+[    0.409934] 18002000.uart: ttyS0 at MMIO 0x18002000 (irq = 30, base_baud = 10937500) is a 16550A
+[    0.419584] printk: console [ttyS0] enabled
+[    0.419584] printk: console [ttyS0] enabled
+[    0.428911] printk: bootconsole [early0] disabled
+[    0.428911] printk: bootconsole [early0] disabled
+[    0.439384] printk: bootconsole [ns16550a0] disabled
+[    0.439384] printk: bootconsole [ns16550a0] disabled
+[    0.552647] brd: module loaded
+[    0.580329] spi-nor spi0.0: mx25l12805d (16384 Kbytes)
+[    0.586184] 7 fixed-partitions partitions found on MTD device spi0.0
+[    0.593334] OF: Bad cell count for /soc/spi@1200/flash@0/partitions
+[    0.600413] OF: Bad cell count for /soc/spi@1200/flash@0/partitions
+[    0.607768] Creating 7 MTD partitions on "spi0.0":
+[    0.613116] 0x000000000000-0x0000000e0000 : "u-boot"
+[    0.621524] 0x0000000e0000-0x0000000f0000 : "u-boot-env"
+[    0.628757] 0x0000000f0000-0x000000100000 : "u-boot-env2"
+[    0.637974] 0x000000100000-0x000000200000 : "jffs"
+[    0.644508] 0x000000200000-0x000000300000 : "jffs2"
+[    0.653026] 0x000000300000-0x000000fe0000 : "firmware"
+[    0.676253] 0x000000fe0000-0x000001000000 : "log"
+[    0.691535] Probing RTL838X eth device pdev: 8208ea00, dev: 8208ea10
+[    0.718402] Found SoC ID: 9303: RTL9303, family 9300
+[    0.724023] Using MAC 000000e04c000000
+[    0.728287] set sds port 8 to 3
+[    0.731789] set sds port 16 to 4
+[    0.735375] set sds port 20 to 5
+[    0.738994] set sds port 24 to 6
+[    0.742581] set sds port 25 to 7
+[    0.746883] c45_mask: 00010000
+[    1.233736] i2c_dev: i2c /dev entries driver
+[    1.238734] rtl9300_i2c_probe probing I2C adapter
+[    1.244002] i2c-rtl9300 1b00036c.i2c-rtl9300: SCL speed 100000, mode is 0
+[    1.251604] rtl9300_i2c_probe scl_num 0
+[    1.255895] rtl9300_i2c_probe sda_num 1
+[    1.263425] NET: Registered PF_INET6 protocol family
+[    1.282000] Segment Routing with IPv6
+[    1.286301] In-situ OAM (IOAM) with IPv6
+[    1.290793] NET: Registered PF_PACKET protocol family
+[    1.296615] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    1.311462] 8021q: 802.1Q VLAN Support v1.8
+[    1.317608] sfp sfp-p12: Host maximum power 1.0W
+[    1.346350] rtl93xx_setup called
+[    1.349988] In rtl83xx_vlan_setup
+[    1.353659] In rtl930x_vlan_profile_setup
+[    1.358186] In rtl930x_vlan_profile_setup
+[    1.362650] UNKNOWN_MC_PMASK: 000000001fffffff
+[    1.367615] VLAN 0: L2 learn: 0; Unknown MC PMasks: L2 1fffffff, IPv4 1fffffff, IPv6: 1fffffff
+[    1.367632]   Routing enabled: IPv4 UC y, IPv6 UC y, IPv4 MC y, IPv6 MC y
+[    1.384776]   Bridge enabled: IPv4 MC n, IPv6 MC n,
+[    1.390221] VLAN profile 0: raw 00033000 00000000 1fffffff 1fffffff 1fffffff
+[    2.415671] rtl83xx_enable_phy_polling:          3110100
+[    2.421595] rtl930x_pie_init
+[    2.425005] rtl930x_led_init called
+[    2.429012] rtl930x_led_init bb00cc00: 01052659
+[    2.434047] rtl930x_led_init bb00cc04: aaabaaaa
+[    2.439104] rtl930x_led_init bb00cc08: 00afabab
+[    2.444140] rtl930x_led_init bb00cc0c: 00000000
+[    2.449193] rtl930x_led_init bb00cc10: 00000000
+[    2.454225] rtl930x_led_init bb00cc14: 0000ffff
+[    2.459279] rtl930x_led_init bb00cc18: 0a200a01
+[    2.464310] rtl930x_led_init bb00cc1c: 0a0b0a28
+[    2.469363] rtl930x_led_init bb00cc20: 0a820a0b
+[    2.474394] rtl930x_led_init bb00cc24: 0000ffff
+[    2.479456] rtl930x_led_init bb00cc28: 0a200b80
+[    2.484497] rtl930x_led_init bb00cc2c: 00000000
+[    2.489556] rtl930x_led_init bb00cc30: 00000000
+[    2.494591] rtl930x_led_init bb00cc34: 00000000
+[    2.499645] rtl930x_led_init bb00cc38: 00000000
+[    2.504675] rtl930x_led_init bb00cc3c: 03110100
+[    2.509729] rtl930x_led_init bb00cc40: 03110100
+[    2.514761] rtl930x_led_init bb00cc44: 03110100
+[    2.519814] rtl930x_led_init bb00cc48: 00000000
+[    2.524845] rtl930x_led_init bb00cc4c: 00000000
+[    2.529899] rtl930x_led_init bb00cc50: 00000000
+[    2.534930] rtl930x_led_init bb00cc54: 00000000
+[    2.539984] rtl930x_led_init bb00cc58: 00000000
+[    2.545016] rtl930x_led_init bb00cc5c: 00000000
+[    2.550439] rtl83xx-switch switch@1b000000: configuring for fixed/internal link mode
+[    2.559132] rtl93xx_phylink_mac_config port 28, mode 1, phy-mode: internal, speed 1000, link 0
+[    2.569400] rtl83xx-switch switch@1b000000 lan1 (uninitialized): PHY [mdio-bus:08] driver [Generic Clause 45 PHY] (irq=POLL)
+[    2.583575] rtl83xx-switch switch@1b000000 lan2 (uninitialized): PHY [mdio-bus:10] driver [Generic Clause 45 PHY] (irq=POLL)
+[    2.597895] rtl83xx-switch switch@1b000000 lan3 (uninitialized): PHY [mdio-bus:14] driver [Generic Clause 45 PHY] (irq=POLL)
+[    2.612222] rtl83xx-switch switch@1b000000 lan4 (uninitialized): PHY [mdio-bus:18] driver [Generic Clause 45 PHY] (irq=POLL)
+[    2.626550] rtl83xx-switch switch@1b000000 lan5 (uninitialized): PHY [mdio-bus:19] driver [Generic Clause 45 PHY] (irq=POLL)
+[    2.640260] DSA: tree 0 setup
+[    2.643614] LINK state irq: 23
+[    2.647093] In rtl83xx_setup_qos
+[    2.650750] L3_IPUC_ROUTE_CTRL 00002000, IPMC_ROUTE 0000077e, IP6UC_ROUTE 00014400, IP6MC_ROUTE 0001db7e
+[    2.661327] L3_IPUC_ROUTE_CTRL 00002001, IPMC_ROUTE 00000501, IP6UC_ROUTE 00014581, IP6MC_ROUTE 00012881
+[    2.671898] L3_IP_ROUTE_CTRL 0000013f
+[    2.676098] rtl930x_dbgfs_init called
+[    2.682235] rtl93xx_phylink_mac_config port 28, mode 1, phy-mode: internal, speed 1000, link 1
+[    2.691912] rtl83xx-switch switch@1b000000: Link is Up - 1Gbps/Full - flow control off
+[    2.705595] rtl83xx_fib_event_work_do: FIB4 default rule failed
+[    2.712285] rtl83xx_fib_event_work_do: FIB4 default rule failed
+[    2.765123] Freeing unused kernel image (initmem) memory: 10388K
+[    2.771876] This architecture does not have kernel memory protection.
+[    2.779069] Run /init as init process
+[    2.783139]   with arguments:
+[    2.786453]     /init
+[    2.788976]   with environment:
+[    2.792452]     HOME=/
+[    2.795058]     TERM=linux
+[    3.264881] init: Console is alive
+[    3.269319] init: - watchdog -
+[    3.292851] kmodloader: loading kernel modules from /etc/modules-boot.d/*
+[    3.306677] kmodloader: done loading kernel modules from /etc/modules-boot.d/*
+[    3.325360] init: - preinit -
+[    3.574561] random: jshn: uninitialized urandom read (4 bytes read)
+[    3.673421] random: jshn: uninitialized urandom read (4 bytes read)
+[    4.068442] random: jshn: uninitialized urandom read (4 bytes read)
+[    4.314053] RESETTING 9300, CPU_PORT 28
+[    4.518706] rtl838x-eth 1b00a300.ethernet eth0: configuring for fixed/internal link mode
+[    4.527721] In rtl838x_mac_config, mode 1
+[    4.533010] rtl83xx-switch switch@1b000000 lan1: configuring for phy/usxgmii link mode
+[    4.541911] rtl93xx_phylink_mac_config port 8, mode 0, phy-mode: usxgmii, speed -1, link 0
+[    4.551130] rtl93xx_phylink_mac_config SDS is 3
+[    4.556316] 8021q: adding VLAN 0 to HW filter on device lan1
+[    4.562925] rtl838x-eth 1b00a300.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[    4.572228] ------------[ cut here ]------------
+[    4.577403] WARNING: CPU: 0 PID: 269 at drivers/net/phy/phy.c:955 phy_state_machine+0xb0/0x2b8
+[    4.587032] Modules linked in: gpio_button_hotplug crc32c_generic
+[    4.593823] CPU: 0 PID: 269 Comm: kworker/0:3 Not tainted 5.15.111 #0
+[    4.601017] Workqueue: events_power_efficient phy_state_machine
+[    4.607643] Stack : 80850000 824e8c00 804822f8 00000009 8200855c 80163894 82314340 80859ea3
+[    4.616996]         813132a0 0000010d 82343d64 80850000 807a4ff8 00000001 82343d38 d7426a62
+[    4.626350]         00000000 00000000 807a4ff8 82343bb8 ffffefff 00000000 00000000 ffffffea
+[    4.635710]         000000b7 82343bc4 000000b7 8085fff8 81310000 00000009 00000000 804822f8
+[    4.645034]         00000009 8200855c 81467605 824e8c40 00000018 80424cf0 00000000 81310000
+[    4.654380]         ...
+[    4.657131] Call Trace:
+[    4.659841] [<801064d8>] show_stack+0x28/0xf0
+[    4.664708] [<80127674>] __warn+0x9c/0x124
+[    4.669307] [<80127758>] warn_slowpath_fmt+0x5c/0xac
+[    4.674835] [<804822f8>] phy_state_machine+0xb0/0x2b8
+[    4.680488] [<8013f29c>] process_one_work+0x254/0x4a0
+[    4.686157] [<8013fa58>] worker_thread+0x16c/0x5b0
+[    4.691494] [<80147850>] kthread+0x134/0x13c
+[    4.696277] [<801016f8>] ret_from_kernel_thread+0x14/0x1c
+[    4.702291]
+[    4.703938] ---[ end trace 7613d2bfc9d8b07e ]---
+[    4.727131] random: procd: uninitialized urandom read (4 bytes read)
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    4.815793] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    4.822827] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[    4.830221] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[    4.837852] rtl83xx_fib_event_work_do: FIB4 failed
+[    4.843204] rtl83xx_fib_event_work_do: FIB4 failed
+[    4.848583] rtl83xx_fib_event_work_do: FIB4 failed
+[    6.883522] rtl83xx_fib4_del: no such gateway: 0.0.0.0
+[    6.895746] rtl83xx_fib4_del: no such gateway: 0.0.0.0
+[    6.901498] rtl83xx_fib4_del: no such gateway: 0.0.0.0
+[    6.909988] ------------[ cut here ]------------
+[    6.915141] WARNING: CPU: 0 PID: 457 at drivers/net/phy/phy.c:1079 phy_stop+0x60/0x1d8
+[    6.924019] called from state HALTED
+[    6.928014] Modules linked in: gpio_button_hotplug crc32c_generic
+[    6.934802] CPU: 0 PID: 457 Comm: ip Tainted: G        W         5.15.111 #0
+[    6.942668] Stack : 00000000 00000000 821e16f4 81310000 80860000 807a4ff8 82311d80 80859ea3
+[    6.952033]         813132a0 000001c9 00000000 80163894 8079e7bc 00000001 821e16b0 55dca436
+[    6.961392]         00000000 00000000 807a4ff8 821e1548 ffffefff 00000000 00000000 ffffffea
+[    6.970742]         000000d7 821e1554 000000d7 8085fff8 81310000 00000009 00000000 80482560
+[    6.980090]         00000009 00000000 823d7010 8081dcdc 00000018 80424cf0 00000000 81310000
+[    6.989438]         ...
+[    6.992158] Call Trace:
+[    6.994869] [<801064d8>] show_stack+0x28/0xf0
+[    6.999760] [<80127674>] __warn+0x9c/0x124
+[    7.004333] [<80127788>] warn_slowpath_fmt+0x8c/0xac
+[    7.009889] [<80482560>] phy_stop+0x60/0x1d8
+[    7.014645] [<8047c4c8>] phylink_stop+0x44/0xd0
+[    7.019740] [<806ed5ac>] dsa_port_disable_rt+0x34/0xc8
+[    7.025468] [<806ef7f4>] dsa_slave_close+0x24/0xf4
+[    7.030839] [<80505c94>] __dev_close_many+0x9c/0x114
+[    7.036422] [<805128d4>] __dev_change_flags+0x184/0x218
+[    7.042250] [<80512990>] dev_change_flags+0x28/0x70
+[    7.047709] [<8052324c>] do_setlink+0x2d4/0xb7c
+[    7.052756] [<80524180>] __rtnl_newlink+0x500/0x884
+[    7.058224] [<80524554>] rtnl_newlink+0x50/0x84
+[    7.063271] [<80521830>] rtnetlink_rcv_msg+0x2f0/0x3b4
+[    7.069023] [<80589e4c>] netlink_rcv_skb+0xb4/0x160
+[    7.074470] [<8058942c>] netlink_unicast+0x230/0x354
+[    7.080027] [<80589874>] netlink_sendmsg+0x324/0x490
+[    7.085555] [<804e167c>] ____sys_sendmsg+0xc4/0x240
+[    7.091016] [<804e35c8>] ___sys_sendmsg+0x90/0x108
+[    7.096408] [<804e3744>] sys_sendmsg+0x4c/0xb8
+[    7.101364] [<8010dcc4>] syscall_common+0x34/0x58
+[    7.106635]
+[    7.108288] ---[ end trace 7613d2bfc9d8b07f ]---
+[    7.114213] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[    7.132114] procd: - early -
+[    7.135713] procd: - watchdog -
+[    7.789810] procd: - watchdog -
+[    7.793824] procd: - ubus -
+[    7.806424] random: ubusd: uninitialized urandom read (4 bytes read)
+[    7.847492] random: ubusd: uninitialized urandom read (4 bytes read)
+[    7.855142] random: ubusd: uninitialized urandom read (4 bytes read)
+[    7.865551] procd: - init -
+Please press Enter to activate this console.
+[    8.528015] kmodloader: loading kernel modules from /etc/modules.d/*
+[    8.549240] GACT probability on
+[    8.566782] Mirror/redirect action on
+[    8.587023] u32 classifier
+[    8.590048]     input device check on
+[    8.594108]     Actions configured
+[    8.782646] kmodloader: done loading kernel modules from /etc/modules.d/*
+[    8.916060] urngd: v1.0.2 started.
+[    9.111070] random: crng init done
+[    9.114868] random: 19 urandom warning(s) missed due to ratelimiting
+[   11.583876] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+
+
+
+BusyBox v1.36.0 (2023-05-18 09:35:29 UTC) built-in shell (ash)
+
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ OpenWrt SNAPSHOT, r22921-dd1f3f0675
+ -----------------------------------------------------
+=== WARNING! =====================================
+There is no root password defined on this device!
+Use the "passwd" command to set up a new password
+in order to prevent unauthorized SSH logins.
+--------------------------------------------------
+root@OpenWrt:/# ip l
+1: lo: <LOOPBACK> mtu 65536 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:e0:4c:00:00:00 brd ff:ff:ff:ff:ff:ff
+3: lan1@eth0: <BROADCAST,MULTICAST> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:e0:4c:00:00:00 brd ff:ff:ff:ff:ff:ff
+4: lan2@eth0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:e0:4c:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: lan3@eth0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:e0:4c:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: lan4@eth0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:e0:4c:00:00:00 brd ff:ff:ff:ff:ff:ff
+7: lan5@eth0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:e0:4c:00:00:00 brd ff:ff:ff:ff:ff:ff
+root@OpenWrt:/#
+root@OpenWrt:/#
+root@OpenWrt:/# [  101.368088] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[  101.417733] in rtl838x_eth_stop
+[  101.421310] rtl838x-eth 1b00a300.ethernet eth0: Link is Down
+[  101.945215] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[  101.952595] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[  101.959958] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[  101.967307] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[  102.729489] RESETTING 9300, CPU_PORT 28
+[  102.934140] rtl838x-eth 1b00a300.ethernet eth0: configuring for fixed/internal link mode
+[  102.943141] In rtl838x_mac_config, mode 1
+[  102.947894] rtl838x-eth 1b00a300.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[  102.960242] rtl83xx-switch switch@1b000000 lan1: configuring for phy/usxgmii link mode
+[  102.969157] rtl93xx_phylink_mac_config port 8, mode 0, phy-mode: usxgmii, speed -1, link 0
+[  102.978396] rtl93xx_phylink_mac_config SDS is 3
+[  102.983563] 8021q: adding VLAN 0 to HW filter on device lan1
+[  102.990706] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[  102.997826] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[  103.005173] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[  103.013245] ------------[ cut here ]------------
+[  103.018464] WARNING: CPU: 0 PID: 269 at drivers/net/phy/phy.c:955 phy_state_machine+0xb0/0x2b8
+[  103.028112] Modules linked in: nft_fib_inet nf_flow_table_ipv6 nf_flow_table_ipv4 nf_flow_table_inet nft_reject_ipv6 nft_reject_ipv4 nft_reject_inet nft_reject nft_redir nft_quota nft_objref nft_numgen nft_nat nft_masq nft_log nft_limit nft_hash nft_flow_offload nft_fib_ipv6 nft_fib_ipv4 nft_fib nft_ct nft_counter nft_chain_nat nf_tables nf_nat nf_flow_table nf_conntrack lzo nfnetlink nf_reject_ipv6 nf_reject_ipv4 nf_log_syslog nf_defrag_ipv6 nf_defrag_ipv4 lzo_rle lzo_decompress lzo_compress libcrc32c sch_tbf sch_ingress sch_htb sch_hfsc em_u32 cls_u32 cls_route cls_matchall cls_fw cls_flow cls_basic act_skbedit act_mirred act_gact crypto_acompress gpio_button_hotplug crc32c_generic
+[  103.095756] CPU: 0 PID: 269 Comm: kworker/0:3 Tainted: G        W         5.15.111 #0
+[  103.104473] Workqueue: events_power_efficient phy_state_machine
+[  103.111104] Stack : 80850000 824e8c00 804822f8 00000009 8200855c 80163894 82314340 80859ea3
+[  103.120462]         813132a0 0000010d 82343d64 80850000 807a4ff8 00000001 82343d38 d7426a62
+[  103.129816]         00000000 00000000 807a4ff8 82343bb8 ffffefff 00000000 00000000 ffffffea
+[  103.139173]         00000120 82343bc4 00000120 8085fff8 81310000 00000009 00000000 804822f8
+[  103.148529]         00000009 8200855c 81467605 824e8c40 00000018 80424cf0 00000000 81310000
+[  103.157886]         ...
+[  103.160609] Call Trace:
+[  103.163320] [<801064d8>] show_stack+0x28/0xf0
+[  103.168225] [<80127674>] __warn+0x9c/0x124
+[  103.172801] [<80127758>] warn_slowpath_fmt+0x5c/0xac
+[  103.178362] [<804822f8>] phy_state_machine+0xb0/0x2b8
+[  103.183992] [<8013f29c>] process_one_work+0x254/0x4a0
+[  103.189658] [<8013fa58>] worker_thread+0x16c/0x5b0
+[  103.194998] [<80147850>] kthread+0x134/0x13c
+[  103.199787] [<801016f8>] ret_from_kernel_thread+0x14/0x1c
+[  103.205852]
+[  103.207505] ---[ end trace 7613d2bfc9d8b080 ]---
+[  103.214799] switch: port 1(lan1) entered blocking state
+[  103.220719] switch: port 1(lan1) entered disabled state
+[  103.227579] device lan1 entered promiscuous mode
+[  103.232733] device eth0 entered promiscuous mode
+[  103.257621] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[  103.276149] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[  103.303569] rtl83xx-switch switch@1b000000 lan2: configuring for phy/usxgmii link mode
+[  103.312470] rtl93xx_phylink_mac_config port 16, mode 0, phy-mode: usxgmii, speed -1, link 0
+[  103.321822] rtl93xx_phylink_mac_config SDS is 4
+[  103.327038] 8021q: adding VLAN 0 to HW filter on device lan2
+[  103.424370] switch: port 2(lan2) entered blocking state
+[  103.430294] switch: port 2(lan2) entered disabled state
+[  103.437064] device lan2 entered promiscuous mode
+[  103.480509] rtl83xx-switch switch@1b000000 lan3: configuring for phy/usxgmii link mode
+[  103.489407] rtl93xx_phylink_mac_config port 20, mode 0, phy-mode: usxgmii, speed -1, link 0
+[  103.498758] rtl93xx_phylink_mac_config SDS is 5
+[  103.503936] 8021q: adding VLAN 0 to HW filter on device lan3
+[  103.536208] switch: port 3(lan3) entered blocking state
+[  103.542051] switch: port 3(lan3) entered disabled state
+[  103.566394] device lan3 entered promiscuous mode
+[  103.592476] rtl83xx-switch switch@1b000000 lan4: configuring for phy/usxgmii link mode
+[  103.601368] rtl93xx_phylink_mac_config port 24, mode 0, phy-mode: usxgmii, speed -1, link 0
+[  103.610701] rtl93xx_phylink_mac_config SDS is 6
+[  103.615904] 8021q: adding VLAN 0 to HW filter on device lan4
+[  103.640608] rtl930x_set_l3_egress_intf writing to index 0: 00000201 10101492
+[  103.661829] ------------[ cut here ]------------
+[  103.667054] WARNING: CPU: 0 PID: 269 at drivers/net/phy/phy.c:955 phy_state_machine+0xb0/0x2b8
+[  103.676703] Modules linked in: nft_fib_inet nf_flow_table_ipv6 nf_flow_table_ipv4 nf_flow_table_inet nft_reject_ipv6 nft_reject_ipv4 nft_reject_inet nft_reject nft_redir nft_quota nft_objref nft_numgen nft_nat nft_masq nft_log nft_limit nft_hash nft_flow_offload nft_fib_ipv6 nft_fib_ipv4 nft_fib nft_ct nft_counter nft_chain_nat nf_tables nf_nat nf_flow_table nf_conntrack lzo nfnetlink nf_reject_ipv6 nf_reject_ipv4 nf_log_syslog nf_defrag_ipv6 nf_defrag_ipv4 lzo_rle lzo_decompress lzo_compress libcrc32c sch_tbf sch_ingress sch_htb sch_hfsc em_u32 cls_u32 cls_route cls_matchall cls_fw cls_flow cls_basic act_skbedit act_mirred act_gact crypto_acompress gpio_button_hotplug crc32c_generic
+[  103.744331] CPU: 0 PID: 269 Comm: kworker/0:3 Tainted: G        W         5.15.111 #0
+[  103.753085] Workqueue: events_power_efficient phy_state_machine
+[  103.759731] Stack : 80850000 824e8c00 804822f8 00000009 8200855c 80163894 82314340 80859ea3
+[  103.769097]         813132a0 0000010d 82343d64 80850000 807a4ff8 00000001 82343d38 d7426a62
+[  103.778457]         00000000 00000000 807a4ff8 82343bb8 ffffefff 00000000 00000000 ffffffea
+[  103.787813]         0000014f 82343bc4 0000014f 8085fff8 81310000 00000009 00000000 804822f8
+[  103.797169]         00000009 8200855c 81467605 824e8c40 00000018 80424cf0 00000000 81310000
+[  103.806526]         ...
+[  103.809248] Call Trace:
+[  103.811960] [<801064d8>] show_stack+0x28/0xf0
+[  103.816864] [<80127674>] __warn+0x9c/0x124
+[  103.821441] [<80127758>] warn_slowpath_fmt+0x5c/0xac
+[  103.827003] [<804822f8>] phy_state_machine+0xb0/0x2b8
+[  103.832632] [<8013f29c>] process_one_work+0x254/0x4a0
+[  103.838298] [<8013fa58>] worker_thread+0x16c/0x5b0
+[  103.843638] [<80147850>] kthread+0x134/0x13c
+[  103.848427] [<801016f8>] ret_from_kernel_thread+0x14/0x1c
+[  103.854444]
+[  103.856129] ---[ end trace 7613d2bfc9d8b081 ]---
+[  103.866379] switch: port 4(lan4) entered blocking state
+[  103.872222] switch: port 4(lan4) entered disabled state
+[  103.891187] device lan4 entered promiscuous mode
+[  103.926047] rtl83xx-switch switch@1b000000 lan5: configuring for phy/usxgmii link mode
+[  103.934882] rtl93xx_phylink_mac_config port 25, mode 0, phy-mode: usxgmii, speed -1, link 0
+[  103.944240] rtl93xx_phylink_mac_config SDS is 7
+[  103.949445] 8021q: adding VLAN 0 to HW filter on device lan5
+[  103.986184] switch: port 5(lan5) entered blocking state
+[  103.992023] switch: port 5(lan5) entered disabled state
+[  104.016378] device lan5 entered promiscuous mode
+[  104.029954] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[  104.312764] ------------[ cut here ]------------
+[  104.317979] WARNING: CPU: 0 PID: 269 at drivers/net/phy/phy.c:955 phy_state_machine+0xb0/0x2b8
+[  104.327621] Modules linked in: nft_fib_inet nf_flow_table_ipv6 nf_flow_table_ipv4 nf_flow_table_inet nft_reject_ipv6 nft_reject_ipv4 nft_reject_inet nft_reject nft_redir nft_quota nft_objref nft_numgen nft_nat nft_masq nft_log nft_limit nft_hash nft_flow_offload nft_fib_ipv6 nft_fib_ipv4 nft_fib nft_ct nft_counter nft_chain_nat nf_tables nf_nat nf_flow_table nf_conntrack lzo nfnetlink nf_reject_ipv6 nf_reject_ipv4 nf_log_syslog nf_defrag_ipv6 nf_defrag_ipv4 lzo_rle lzo_decompress lzo_compress libcrc32c sch_tbf sch_ingress sch_htb sch_hfsc em_u32 cls_u32 cls_route cls_matchall cls_fw cls_flow cls_basic act_skbedit act_mirred act_gact crypto_acompress gpio_button_hotplug crc32c_generic
+[  104.395243] CPU: 0 PID: 269 Comm: kworker/0:3 Tainted: G        W         5.15.111 #0
+[  104.403998] Workqueue: events_power_efficient phy_state_machine
+[  104.410625] Stack : 80850000 824e8c00 804822f8 00000009 8200855c 80163894 82314340 80859ea3
+[  104.419998]         813132a0 0000010d 82343d64 80850000 807a4ff8 00000001 82343d38 d7426a62
+[  104.429365]         00000000 00000000 807a4ff8 82343bb8 ffffefff 00000000 00000000 ffffffea
+[  104.438726]         00000170 82343bc4 00000170 8085fff8 81310000 00000009 00000000 804822f8
+[  104.448082]         00000009 8200855c 81467605 824e8c40 00000018 80424cf0 00000000 81310000
+[  104.457439]         ...
+[  104.460161] Call Trace:
+[  104.462872] [<801064d8>] show_stack+0x28/0xf0
+[  104.467776] [<80127674>] __warn+0x9c/0x124
+[  104.472344] [<80127758>] warn_slowpath_fmt+0x5c/0xac
+[  104.477908] [<804822f8>] phy_state_machine+0xb0/0x2b8
+[  104.483536] [<8013f29c>] process_one_work+0x254/0x4a0
+[  104.489212] [<8013fa58>] worker_thread+0x16c/0x5b0
+[  104.494552] [<80147850>] kthread+0x134/0x13c
+[  104.499341] [<801016f8>] ret_from_kernel_thread+0x14/0x1c
+[  104.505358]
+[  104.507042] ---[ end trace 7613d2bfc9d8b082 ]---
+[  105.105762] ------------[ cut here ]------------
+[  105.110920] WARNING: CPU: 0 PID: 269 at drivers/net/phy/phy.c:955 phy_state_machine+0xb0/0x2b8
+[  105.120568] Modules linked in: nft_fib_inet nf_flow_table_ipv6 nf_flow_table_ipv4 nf_flow_table_inet nft_reject_ipv6 nft_reject_ipv4 nft_reject_inet nft_reject nft_redir nft_quota nft_objref nft_numgen nft_nat nft_masq nft_log nft_limit nft_hash nft_flow_offload nft_fib_ipv6 nft_fib_ipv4 nft_fib nft_ct nft_counter nft_chain_nat nf_tables nf_nat nf_flow_table nf_conntrack lzo nfnetlink nf_reject_ipv6 nf_reject_ipv4 nf_log_syslog nf_defrag_ipv6 nf_defrag_ipv4 lzo_rle lzo_decompress lzo_compress libcrc32c sch_tbf sch_ingress sch_htb sch_hfsc em_u32 cls_u32 cls_route cls_matchall cls_fw cls_flow cls_basic act_skbedit act_mirred act_gact crypto_acompress gpio_button_hotplug crc32c_generic
+[  105.188216] CPU: 0 PID: 269 Comm: kworker/0:3 Tainted: G        W         5.15.111 #0
+[  105.196974] Workqueue: events_power_efficient phy_state_machine
+[  105.203568] Stack : 80850000 824e8c00 804822f8 00000009 8200855c 80163894 82314340 80859ea3
+[  105.212928]         813132a0 0000010d 82343d64 80850000 807a4ff8 00000001 82343d38 d7426a62
+[  105.222288]         00000000 00000000 807a4ff8 82343bb8 ffffefff 00000000 00000000 ffffffea
+[  105.231645]         00000186 82343bc4 00000186 8085fff8 81310000 00000009 00000000 804822f8
+[  105.241001]         00000009 8200855c 81467605 824e8c40 00000018 80424cf0 00000000 81310000
+[  105.250357]         ...
+[  105.253079] Call Trace:
+[  105.255824] [<801064d8>] show_stack+0x28/0xf0
+[  105.260693] [<80127674>] __warn+0x9c/0x124
+[  105.265254] [<80127758>] warn_slowpath_fmt+0x5c/0xac
+[  105.270816] [<804822f8>] phy_state_machine+0xb0/0x2b8
+[  105.276485] [<8013f29c>] process_one_work+0x254/0x4a0
+[  105.282124] [<8013fa58>] worker_thread+0x16c/0x5b0
+[  105.287492] [<80147850>] kthread+0x134/0x13c
+[  105.292253] [<801016f8>] ret_from_kernel_thread+0x14/0x1c
+[  105.298305]
+[  105.299958] ---[ end trace 7613d2bfc9d8b083 ]---
+[  105.805920] ------------[ cut here ]------------
+[  105.811080] WARNING: CPU: 0 PID: 269 at drivers/net/phy/phy.c:955 phy_state_machine+0xb0/0x2b8
+[  105.820739] Modules linked in: nft_fib_inet nf_flow_table_ipv6 nf_flow_table_ipv4 nf_flow_table_inet nft_reject_ipv6 nft_reject_ipv4 nft_reject_inet nft_reject nft_redir nft_quota nft_objref nft_numgen nft_nat nft_masq nft_log nft_limit nft_hash nft_flow_offload nft_fib_ipv6 nft_fib_ipv4 nft_fib nft_ct nft_counter nft_chain_nat nf_tables nf_nat nf_flow_table nf_conntrack lzo nfnetlink nf_reject_ipv6 nf_reject_ipv4 nf_log_syslog nf_defrag_ipv6 nf_defrag_ipv4 lzo_rle lzo_decompress lzo_compress libcrc32c sch_tbf sch_ingress sch_htb sch_hfsc em_u32 cls_u32 cls_route cls_matchall cls_fw cls_flow cls_basic act_skbedit act_mirred act_gact crypto_acompress gpio_button_hotplug crc32c_generic
+[  105.888383] CPU: 0 PID: 269 Comm: kworker/0:3 Tainted: G        W         5.15.111 #0
+[  105.897145] Workqueue: events_power_efficient phy_state_machine
+[  105.903738] Stack : 80850000 824e8c00 804822f8 00000009 8200855c 80163894 82314340 80859ea3
+[  105.913097]         813132a0 0000010d 82343d64 80850000 807a4ff8 00000001 82343d38 d7426a62
+[  105.922457]         00000000 00000000 807a4ff8 82343bb8 ffffefff 00000000 00000000 ffffffea
+[  105.931814]         0000019c 82343bc4 0000019c 8085fff8 81310000 00000009 00000000 804822f8
+[  105.941170]         00000009 8200855c 81467605 824e8c40 00000018 80424cf0 00000000 81310000
+[  105.950527]         ...
+[  105.953249] Call Trace:
+[  105.955999] [<801064d8>] show_stack+0x28/0xf0
+[  105.960872] [<80127674>] __warn+0x9c/0x124
+[  105.965433] [<80127758>] warn_slowpath_fmt+0x5c/0xac
+[  105.970995] [<804822f8>] phy_state_machine+0xb0/0x2b8
+[  105.976664] [<8013f29c>] process_one_work+0x254/0x4a0
+[  105.982304] [<8013fa58>] worker_thread+0x16c/0x5b0
+[  105.987671] [<80147850>] kthread+0x134/0x13c
+[  105.992432] [<801016f8>] ret_from_kernel_thread+0x14/0x1c
+[  105.998484]
+[  106.000137] ---[ end trace 7613d2bfc9d8b084 ]---
+[  107.215791] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+[  107.223140] rtl83xx_fib_event: FIB_RULE ADD/DEL for IPv6 not supported
+
+root@OpenWrt:/# ip l
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:e0:4c:00:00:00 brd ff:ff:ff:ff:ff:ff
+3: lan1@eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue master switch state LOWERLAYERDOWN mode DEFAULT group default qlen 1000
+    link/ether 00:e0:4c:00:00:00 brd ff:ff:ff:ff:ff:ff
+4: lan2@eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue master switch state LOWERLAYERDOWN mode DEFAULT group default qlen 1000
+    link/ether 00:e0:4c:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: lan3@eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue master switch state LOWERLAYERDOWN mode DEFAULT group default qlen 1000
+    link/ether 02:00:01:00:00:02 brd ff:ff:ff:ff:ff:ff permaddr 00:e0:4c:00:00:00
+6: lan4@eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue master switch state LOWERLAYERDOWN mode DEFAULT group default qlen 1000
+    link/ether 02:00:01:00:00:03 brd ff:ff:ff:ff:ff:ff permaddr 00:e0:4c:00:00:00
+7: lan5@eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue master switch state LOWERLAYERDOWN mode DEFAULT group default qlen 1000
+    link/ether 02:00:01:00:00:04 brd ff:ff:ff:ff:ff:ff permaddr 00:e0:4c:00:00:00
+8: switch: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:e0:4c:00:00:00 brd ff:ff:ff:ff:ff:ff
+9: switch.1@switch: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state LOWERLAYERDOWN mode DEFAULT group default qlen 1000
+    link/ether 00:e0:4c:00:00:00 brd ff:ff:ff:ff:ff:ff
+root@OpenWrt:/#
