@@ -59,7 +59,7 @@ class MyModem:
             modem.send(file)
 
 
-def transfer_and_run(port, baudrate, filename, should_rtk_network_on):
+def transfer_and_run(port, baudrate, filename, should_rtk_network_on, should_boot):
 
     transferred = False
     did_rtk_network_on = False
@@ -89,8 +89,11 @@ def transfer_and_run(port, baudrate, filename, should_rtk_network_on):
                     write_response(ser, RTK_NETWORK_ON)
                 elif not transferred:
                     write_response(ser, LOADY)
-                else:
+                elif should_boot:
                     write_response(ser, BOOTM)
+                else:
+                    # no action to take, exit
+                    return
 
             elif line.startswith(YMODEM_READY):
                 line = ""
@@ -103,12 +106,11 @@ def transfer_and_run(port, baudrate, filename, should_rtk_network_on):
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
-        print(f'Usage: {sys.argv[0]} port filename ["no_net" to not send "rtk network on"]')
+        print(f'Usage: {sys.argv[0]} port filename [no_net] [no-boot]')
         sys.exit(1)
     
-    should_rtk_network_on = True
-    if len(sys.argv) == 4 and sys.argv[3] == "no_net":
-        should_rtk_network_on = False
+    should_rtk_network_on = "no-net" not in sys.argv
+    should_boot = "no-boot" not in sys.argv
 
-    transfer_and_run(sys.argv[1], 115200, sys.argv[2], should_rtk_network_on)
+    transfer_and_run(sys.argv[1], 115200, sys.argv[2], should_rtk_network_on, should_boot)
 
