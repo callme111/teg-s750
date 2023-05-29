@@ -68,10 +68,16 @@ def transfer_and_run(port, baudrate, filename, should_rtk_network_on, should_boo
 
         print("Ready, power up switch.\n")
         # ser.write(b"\n")
+        ser.write(b"\nreboot\n")
 
         line = ""
         while True:
-            read = ser.read().decode("ascii")
+            try:
+                read = ser.read().decode("ascii")
+            except KeyboardInterrupt:
+                raise
+            except:
+                continue
             print(read, end="")
             
             line += read
