@@ -65,49 +65,51 @@ def transfer_and_run(port, baudrate, filename, should_rtk_network_on, should_boo
     did_rtk_network_on = False
     
     with serial.Serial(port, baudrate=baudrate) as ser:
+        with open('out', 'w') as out:
 
-        print("Ready, power up switch.\n")
-        # ser.write(b"\n")
-        ser.write(b"\nreboot\n")
-
-        line = ""
-        while True:
-            try:
-                read = ser.read().decode("ascii")
-            except KeyboardInterrupt:
-                raise
-            except:
-                continue
-            print(read, end="")
-            
-            line += read
-            if line.endswith("\n"):
-                line = ""
-
-            if line.startswith(ESC_TO_STOP_AUTOBOOT):
-                line = ""
-                write_response(ser, ESC)
-            
-            elif line.startswith(PROMPT):
-                line = ""
-                if should_rtk_network_on and not did_rtk_network_on:
-                    did_rtk_network_on = True
-                    write_response(ser, RTK_NETWORK_ON)
-                elif not transferred:
-                    write_response(ser, LOADY)
-                elif should_boot:
-                    write_response(ser, BOOTM)
-                else:
-                    # no action to take, exit
-                    return
-
-            elif line.startswith(YMODEM_READY):
-                line = ""
-                ser.read_until()
-
-                m = MyModem(ser, filename)
-                m.transfer()
-                transferred = True
+            print("Ready, power up switch.\n")
+            # ser.write(b"\n")
+            ser.write(b"\nreboot\n")
+    
+            line = ""
+            while True:
+                try:
+                    read = ser.read().decode("ascii")
+                except KeyboardInterrupt:
+                    raise
+                except:
+                    continue
+                print(read, end="")
+                out.write(read)
+                
+                line += read
+                if line.endswith("\n"):
+                    line = ""
+    
+                if line.startswith(ESC_TO_STOP_AUTOBOOT):
+                    line = ""
+                    write_response(ser, ESC)
+                
+                elif line.startswith(PROMPT):
+                    line = ""
+                    if should_rtk_network_on and not did_rtk_network_on:
+                        did_rtk_network_on = True
+                        write_response(ser, RTK_NETWORK_ON)
+                    elif not transferred:
+                        write_response(ser, LOADY)
+                    elif should_boot:
+                        write_response(ser, BOOTM)
+                    else:
+                        # no action to take, exit
+                        return
+    
+                elif line.startswith(YMODEM_READY):
+                    line = ""
+                    ser.read_until()
+    
+                    m = MyModem(ser, filename)
+                    m.transfer()
+                    transferred = True
 
 
 if __name__ == '__main__':
