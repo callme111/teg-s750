@@ -1,0 +1,104 @@
+#!/bin/sh
+
+#
+# create essential directory
+#
+mkdir /var/empty
+mkdir /dev/pts
+
+#
+# mount process
+#
+mount -t devpts devpts /dev/pts
+mount -t proc proc /proc
+#mount -t jffs2 -o rw,sync /dev/mtdblock3 /mnt
+
+echo "5 4 1 7" > /proc/sys/kernel/printk
+
+#
+# insert kernel module if exist
+# default path is /lib/modules/X.X.XX/kernel
+#
+if [ -d "/lib/modules/X.X.XX/kernel" ]; then
+cd /lib/modules/X.X.XX/kernel
+fi
+
+cat /proc/meminfo > /tmp/mem_log_rtsdk_start
+
+RESULT=1
+if [ -f "drivers/net/switch/rtcore/rtcore.ko" ]; then
+	insmod drivers/net/switch/rtcore/rtcore.ko
+	RESULT=$?
+else
+    if [ -f "/lib/modules/rtcore.ko" ]; then
+    	insmod /lib/modules/rtcore.ko
+    	RESULT=$?
+    fi
+fi
+
+if [ $RESULT -eq 0 ] && [ -f "drivers/net/switch/rtk/rtk.ko" ]; then
+	insmod drivers/net/switch/rtk/rtk.ko
+	RESULT=$?
+else
+    if [ $RESULT -eq 0 ] && [ -f "/lib/modules/rtk.ko" ]; then
+    	insmod /lib/modules/rtk.ko
+    	RESULT=$?
+    fi
+fi
+
+if [ $RESULT -eq 0 ] && [ -f "drivers/net/switch/rtnic/rtnic.ko" ]; then
+    insmod drivers/net/switch/rtnic/rtnic.ko
+	RESULT=$?
+else
+    if [ $RESULT -eq 0 ] && [ -f "/lib/modules/rtnic.ko" ]; then
+        insmod /lib/modules/rtnic.ko
+    	RESULT=$?
+    fi
+fi
+
+if [ $RESULT -eq 0 ] && [ -f "/lib/model/model.ko" ]; then
+	insmod /lib/model/model.ko
+	RESULT=$?
+fi
+
+if [ $RESULT -eq 0 ] && [ -f "net/switch/rtdrv/rtdrv.ko" ]; then
+	insmod net/switch/rtdrv/rtdrv.ko
+	RESULT=$?
+else
+    if [ $RESULT -eq 0 ] && [ -f "/lib/modules/rtdrv.ko" ]; then
+        insmod /lib/modules/rtdrv.ko
+    	RESULT=$?
+    fi
+fi
+
+if [ $RESULT -eq 0 ] && [ -f "/lib/modules/rise.ko" ]; then
+	insmod /lib/modules/rise.ko
+	RESULT=$?
+fi
+
+if [ -f "/lib/modules/rlapp.ko" ]; then
+	insmod /lib/modules/rlapp.ko
+	RESULT=$?
+fi
+
+cd /
+
+
+cat /proc/meminfo > /tmp/mem_log_rtsdk_finish
+
+#
+# network interface configuration
+#
+ifconfig lo 127.0.0.1
+route add -net 127.0.0.0 netmask 255.255.255.0 lo
+
+ifconfig eth0 192.168.1.1
+
+#
+# start application
+#
+if [ $RESULT -eq 0 ] && [ -f "/bin/diag" ]; then
+	diag
+fi
+
+
