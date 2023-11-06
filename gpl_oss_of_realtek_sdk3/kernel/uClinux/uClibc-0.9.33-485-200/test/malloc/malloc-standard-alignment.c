@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	phead->link = NULL;
 
 x	line = malloc(80);
-x	ptmp  = realloc(line, 2);
+x	char *ptmp  = realloc(line, 2);
 	if (ptmp  != NULL) 
     	{
 	       line = ptmp;
